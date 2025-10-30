@@ -1,6 +1,7 @@
-# 🌱 Plant Community Platform
+# 🌱 GitHerb - 스마트 식물 커뮤니티 플랫폼 - backend
 
-> 식물 애호가들을 위한 종합 커뮤니티 플랫폼
+IoT 스마트팜 관리와 소셜 커뮤니티 기능을 결합한 식물 관리 통합 플랫폼입니다.
+사용자는 식물을 모니터링하고, 경험을 공유하며, 식물 관리 일정을 한 곳에서 관리할 수 있습니다.
 
 ![Java](https://img.shields.io/badge/Java-17-007396?style=flat-square&logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.9-6DB33F?style=flat-square&logo=spring-boot)
