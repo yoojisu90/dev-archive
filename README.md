@@ -394,7 +394,6 @@ GET    /api/logs                             - 장치 작동 로그
 ## 👥 팀 구성 및 역할
 
 ### Frontend Web (React)
-- **담당**: 유지수
 - **주요 기능**:
   - MyFarm (스마트팜 관리)
   - 홈 화면
@@ -402,7 +401,6 @@ GET    /api/logs                             - 장치 작동 로그
   - 마이페이지 (캘린더, 다이어리)
 
 ### Frontend Mobile (React Native)
-- **담당**: 유지수
 - **주요 기능**:
   - 실시간 채팅 시스템
   - 게시판
@@ -410,7 +408,6 @@ GET    /api/logs                             - 장치 작동 로그
   - 모바일 최적화
 
 ### Backend (Spring Boot)
-- **담당**: 유지수
 - **주요 기능**:
   - RESTful API 설계
   - WebSocket 채팅 구현
@@ -496,14 +493,25 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 ## 📞 팀 정보
 
 **프로젝트명**: GitHerb - 식물 커뮤니티 플랫폼
-**개발 기간**: 2025.10.17 ~ 2025.11.14
-**팀 규모**: 1명 (풀 스택 개발)
+**개발 기간**: 2025.09.11 ~ 2025.11.14
+**팀 규모**: 4명 (풀 스택 개발)
 
 ### 주요 담당
 - 백엔드 API 및 WebSocket 서버
 - 웹 프론트엔드 (React)
 - 모바일 앱 (React Native)
 - 데이터베이스 설계 및 최적화
+
+---
+
+## 🔗 프로젝트 링크
+
+| 파트 | 링크 | 설명 |
+|------|------|------|
+| 🔙 Backend | [backend_plant_comunity](./backend_plant_comunity) | Spring Boot API 서버 |
+| 💻 Frontend Web | [frontend_plant_comunity](./frontend_plant_comunity) | React 웹 애플리케이션 |
+| 📱 Frontend Mobile | [app_plant_community](./app_plant_community) | React Native 모바일 앱 |
+```
 
 ---
 
