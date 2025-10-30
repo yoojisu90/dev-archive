@@ -555,7 +555,7 @@ cd backend_plant_comunity
 
 - **Email**: yoo901013@gmail.com
 - **GitHub**: [@yoojisu90](https://github.com/yoojisu90)
-- **Portfolio**: [GitHub Portfolio](https://github.com/yoojisu90/portfolio)
+- **Portfolio**: [GitHub Portfolio](https://github.com/yoojisu90/dev-archive)
 
 ---
 
