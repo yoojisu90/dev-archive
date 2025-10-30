@@ -543,10 +543,10 @@ cd backend_plant_comunity
 
 | 단계 | 파트 | 링크 |
 |------|------|------|
-| 1️⃣ | 웹 프론트 | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_comunity) |
-| 2️⃣ | 앱 프론트 | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) |
-| 백엔드 | 공통 | [backend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/backend_plant_comunity) |
-| IoT-Python 센서 및 기기 제어 | 공통 | [IoT-python](https://github.com/yoojisu90/portfolio/tree/main/IoT-python) |
+| 1️⃣ | 웹 프론트 | [frontend_plant_comunity](https://github.com/yoojisu90/dev-archive/tree/main/team/frontend_plant_comunity) |
+| 2️⃣ | 앱 프론트 | [app_plant_community](https://github.com/yoojisu90/dev-archive/tree/main/team/app_plant_community) |
+| 백엔드 | 공통 | [backend_plant_comunity](https://github.com/yoojisu90/dev-archive/tree/main/team/backend_plant_comunity) |
+| IoT-Python 센서 및 기기 제어 | 공통 | [IoT-python](https://github.com/yoojisu90/dev-archive/tree/main/IoT-python) |
 
 
 ---
