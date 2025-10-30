@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 
+    MyBatis XML Mapper 파일
+    - 모든 SQL 쿼리문을 작성하는 파일
+    - namespace에는 연결할 Mapper 인터페이스의 전체 경로를 작성
+-->
+<mapper namespace="com.green.to_do.TodoMapper">
+    
+    <!-- 
+        resultMap: 데이터베이스 컬럼명과 자바 객체의 필드명을 매핑
+        - id: 이 resultMap의 고유 식별자
+        - type: 매핑될 자바 클래스의 전체 경로
+    -->
+    <resultMap id="todo" type="com.green.to_do.TodoDTO">
+        <!-- id: Primary Key 컬럼 매핑 -->
+        <id     column="TODO_NUM"   property="todoNum"/>
+        <!-- result: 일반 컬럼 매핑 -->
+        <result column="TODO_TITLE" property="todoTitle"/>
+    </resultMap>
+
+    <!-- 
+        할 일 목록 조회 쿼리
+        - id: TodoMapper 인터페이스의 메서드명과 동일하게 작성
+        - resultMap: 조회 결과를 매핑할 resultMap의 id 지정
+        - TODO 테이블에서 모든 할 일의 번호와 제목을 조회
+    -->
+    <select id="getTodoList" resultMap="todo">
+        SELECT
+            TODO_NUM,
+            TODO_TITLE
+        FROM TODO
+    </select>
+
+    <!-- 
+        할 일 추가 쿼리
+        - id: TodoMapper 인터페이스의 addTodo 메서드와 연결
+        - #{todoTitle}: 메서드의 파라미터 todoTitle 값이 바인딩됨
+        - TODO 테이블에 새로운 할 일 제목을 INSERT
+    -->
+    <insert id="addTodo">
+        INSERT INTO TODO(
+            TODO_TITLE
+        ) VALUES(
+            #{todoTitle}
+        )
+    </insert>
+
+    <!-- 
+        할 일 삭제 쿼리
+        - id: TodoMapper 인터페이스의 deleteTodo 메서드와 연결
+        - #{todoNum}: 메서드의 파라미터 todoNum 값이 바인딩됨
+        - WHERE 조건을 통해 특정 번호의 할 일만 삭제
+        - TODO_NUM이 Primary Key이므로 정확히 1개의 레코드만 삭제됨
+    -->
+    <delete id="deleteTodo">
+        DELETE FROM TODO
+        WHERE TODO_NUM = #{todoNum}
+    </delete>
+
+    <!--수정쿼리-->
+    <update id="updateTodo">
+        UPDATE TODO
+        SET
+            TODO_TITLE = #{todoTitle}
+        WHERE TODO_NUM = #{todoNum}
+    </update>
+
+
+</mapper>

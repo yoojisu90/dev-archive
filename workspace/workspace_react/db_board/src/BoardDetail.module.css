@@ -1,0 +1,25 @@
+.detail_container{
+  margin: 20px auto;
+  text-align: center;
+  width: 800px;
+}
+
+.detail_table{
+  width: 100%;
+}
+
+.detail_table td:nth-child(odd){
+  background-color: #e1e1e1;
+}
+
+.detail_table td:nth-child(even){
+  background-color: #eaeef7;
+}
+
+.text{
+  text-align: left;
+}
+
+
+
+

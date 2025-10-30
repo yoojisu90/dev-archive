@@ -1,0 +1,22 @@
+.container{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content{
+  display: flex;
+  gap: 10px;
+}
+
+.content > div{
+  display: flex;
+  gap: 10px;
+}
+
+.error{
+  color: red;
+  font-size: 0.7rem;
+}

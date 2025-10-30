@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.green.backend_plant_comunity.board.mapper.BoardMapper">
+    <!--board-->
+	<resultMap id="board" type="com.green.backend_plant_comunity.board.dto.BoardDTO">
+        <id     column="BOARD_NUM"   property="boardNum"/>
+        <result column="TITLE"       property="title"/>
+        <result column="CONTENT"     property="content"/>
+        <result column="MEM_ID"      property="memId"/>
+        <result column="HERB_NUM"    property="herbNum"/>
+        <result column="CATE_NUM"    property="cateNum"/>
+        <result column="READ_CNT"    property="readCnt"/>
+        <result column="LIKE_CNT"    property="likeCnt"/>
+        <result column="DISLIKE_CNT" property="dislikeCnt"/>
+        <result column="COMMENT_CNT" property="commentCnt"/>
+        <result column="CREATE_DATE" property="createDate"/>
+        <collection property="imgList" resultMap="boardImg"/>
+        <collection property="categoryDTO" resultMap="com.green.backend_plant_comunity.category.mapper.CategoryMapper.category"/>
+    </resultMap>
+
+    <!--boardImg-->
+    <resultMap id="boardImg" type="com.green.backend_plant_comunity.board.dto.BoardImgDTO">
+        <id     column="IMG_NUM"            property="imgNum"/>
+        <result column="ORIGIN_IMG_NAME"    property="originImgName"/>
+        <result column="ATTACHED_IMG_NAME"  property="attachedImgName"/>
+        <result column="BOARD_NUM"          property="boardNum"/>
+        <result column="IMG_URL" property="imgUrl"/>
+        <result column="USED" property="used"/>
+    </resultMap>
+
+    <!--글쓸때 이미지 글번호와 일치 시키고 이미지 사용 확인-->
+    <update id="updateImg">
+        UPDATE BOARD_IMG
+            SET
+                BOARD_NUM = #{boardNum},
+                USED = #{used}
+        WHERE IMG_URL = #{imgUrl}
+    </update>
+
+
+    <!--글쓰기 등록-->
+    <insert id="writeBoard" useGeneratedKeys="true" keyProperty="boardNum">
+        INSERT INTO BOARD(
+              TITLE
+            , BOARD_NUM
+            , CONTENT
+            , MEM_ID
+            , CATE_NUM
+        )VALUES(
+              #{title}
+            , #{boardNum}
+            , #{content}
+            , #{memId}
+            , #{cateNum}
+        )
+    </insert>
+
+    <!--홈 화면 인기글 조회-->
+    <select id="getPopularWriting" resultMap="board">
+        SELECT
+            B.BOARD_NUM
+            , B.TITLE
+            , B.MEM_ID
+            , B.CATE_NUM
+            , B.READ_CNT
+            , B.LIKE_CNT
+            , B.DISLIKE_CNT
+            , B.CREATE_DATE
+            , C.CATE_NAME
+            , C.CATE_NUM AS CATEGORY_CATE_NUM
+        FROM BOARD B
+        INNER JOIN CATEGORY C ON B.CATE_NUM = C.CATE_NUM
+        ORDER BY (B.LIKE_CNT + B.READ_CNT) DESC, B.CREATE_DATE DESC
+        LIMIT 10
+    </select>
+
+    <!--마이팜 게시글 조회-->
+    <select id="getMyFarmCommunity" resultMap="board">
+        SELECT BOARD_NUM, TITLE, MEM_ID, HERB_NUM, READ_CNT, LIKE_CNT, DISLIKE_CNT, CREATE_DATE
+        FROM BOARD
+        WHERE MEM_ID = #{memId}
+    </select>
+
+    <!--전체 게시글 조회-->
+    <select id="getAllBoardList" resultMap="board">
+        SELECT BOARD_NUM, TITLE, MEM_ID, HERB_NUM, READ_CNT, LIKE_CNT, DISLIKE_CNT, CREATE_DATE
+        FROM BOARD
+    </select>
+
+    <!--파일선택시 url 데이터 베이스에 저장-->
+    <insert id="insertUrl">
+        INSERT INTO BOARD_IMG(
+            ORIGIN_IMG_NAME
+            , ATTACHED_IMG_NAME
+            , IMG_URL
+        )VALUES
+        <foreach collection="imgList" item="boardImg" separator=",">
+            (#{boardImg.originImgName},#{boardImg.attachedImgName},#{boardImg.imgUrl})
+        </foreach>
+    </insert>
+
+    <!--사용하지 않는 이미지 조회-->
+    <select id="getUnusedImg" resultMap="boardImg">
+        SELECT
+                IMG_NUM
+                , ORIGIN_IMG_NAME
+                , ATTACHED_IMG_NAME
+                , IMG_URL
+                , USED
+        FROM BOARD_IMG
+        WHERE USED = FALSE
+    </select>
+
+    <!--사용하지 않는 이미지 삭제-->
+    <delete id="deleteUnusedImg">
+        DELETE FROM BOARD_IMG
+        WHERE IMG_NUM = #{imgNum}
+    </delete>
+
+    <!-- admin 단일 게시글 삭제-->
+    <delete id="deleteBoardByAdmin">
+        DELETE
+        FROM BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
+    <!--게시글 목록 조회-->
+    <select id="getBoardList" resultMap="board">
+        SELECT
+              B.BOARD_NUM
+            , B.MEM_ID
+            , B.CONTENT
+            , B.CATE_NUM
+            , B.TITLE
+            , B.READ_CNT
+            , B.LIKE_CNT
+            , B.DISLIKE_CNT
+            , B.CREATE_DATE
+            , (SELECT IMG_URL FROM BOARD_IMG WHERE BOARD_NUM = B.BOARD_NUM ORDER BY IMG_NUM LIMIT 1) AS IMG_URL
+            , (SELECT COUNT(*) FROM COMMENT WHERE BOARD_NUM = B.BOARD_NUM) AS COMMENT_CNT
+            , C.CATE_NAME
+            , C.CATE_NUM AS CATEGORY_CATE_NUM
+        FROM BOARD B
+        LEFT JOIN CATEGORY C ON B.CATE_NUM = C.CATE_NUM
+        <where>
+            <if test="cateNum != null and cateNum != 0">
+                AND B.CATE_NUM = #{cateNum}
+            </if>
+            <if test="searchType != null and searchKeyword != null and searchKeyword != ''">
+                <choose>
+                    <when test="searchType == 'memId'">
+                        AND B.MEM_ID LIKE CONCAT('%', #{searchKeyword}, '%')
+                    </when>
+                    <when test="searchType == 'title'">
+                        AND B.TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+                    </when>
+                    <when test="searchType == 'titleAndContent'">
+                        AND (B.TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+                             OR B.CONTENT LIKE CONCAT('%', #{searchKeyword}, '%'))
+                    </when>
+                </choose>
+            </if>
+        </where>
+        ORDER BY B.CREATE_DATE DESC
+        LIMIT #{displayCnt} OFFSET #{offsetCnt}
+    </select>
+
+    <!--글 총 개수-->
+    <select id="getTotalBoardCnt" resultType="int">
+        SELECT
+        COUNT(BOARD_NUM)
+        FROM BOARD
+        <where>
+            <if test="cateNum != null and cateNum != 0">
+                AND CATE_NUM = #{cateNum}
+            </if>
+            <if test="searchType != null and searchKeyword != null and searchKeyword != ''">
+                <choose>
+                    <when test="searchType == 'memId'">
+                        AND MEM_ID LIKE CONCAT('%', #{searchKeyword}, '%')
+                    </when>
+                    <when test="searchType == 'title'">
+                        AND TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+                    </when>
+                    <when test="searchType == 'titleAndContent'">
+                        AND (TITLE LIKE CONCAT('%', #{searchKeyword}, '%') 
+                             OR CONTENT LIKE CONCAT('%', #{searchKeyword}, '%'))
+                    </when>
+                </choose>
+            </if>
+        </where>
+    </select>
+
+    <!--게시글 상세조회-->
+    <select id="getBoardDetail" resultMap="board">
+        SELECT
+              B.BOARD_NUM
+            , B.TITLE
+            , B.CONTENT
+            , B.MEM_ID
+            , B.CATE_NUM
+            , B.READ_CNT
+            , B.LIKE_CNT
+            , B.DISLIKE_CNT
+            , B.CREATE_DATE
+            , C.CATE_NAME
+            , C.CATE_NUM AS CATEGORY_CATE_NUM
+        FROM BOARD B
+        LEFT JOIN CATEGORY C ON B.CATE_NUM = C.CATE_NUM
+        WHERE B.BOARD_NUM = #{boardNum}
+    </select>
+
+    <!--게시글 삭제-->
+    <delete id="deleteBoard">
+        DELETE FROM BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
+    <!--게시글 수정-->
+    <update id="updateBoard">
+        UPDATE BOARD
+        SET TITLE = #{title},
+            CONTENT = #{content}
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
+    <!--게시글의 모든 이미지를 USED=FALSE로 변경-->
+    <update id="markImagesAsUnused">
+        UPDATE BOARD_IMG
+        SET USED = FALSE
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
+    <!--좋아요 개수 증가-->
+    <update id="increaseLikeCnt">
+        UPDATE BOARD
+        SET LIKE_CNT = LIKE_CNT + 1
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
+    <!--좋아요 개수 감소-->
+    <update id="decreaseLikeCnt">
+        UPDATE BOARD
+        SET LIKE_CNT = LIKE_CNT - 1
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
+    <!--조회수 증가-->
+    <update id="updateCnt">
+        UPDATE BOARD
+        SET
+            READ_CNT = READ_CNT + 1
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+</mapper>

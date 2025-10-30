@@ -1,0 +1,37 @@
+.container {
+  width: 1280px;
+  display: flex;
+  margin: 0px auto;
+  padding: 40px 0px;
+  gap: 30px;
+  min-height: calc(100vh - 200px);
+}
+
+.container > div:first-child {
+  min-width: 250px;
+  flex-shrink: 0;
+}
+
+.display {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.display:hover {
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.15);
+}
+
+.display > div:first-child {
+  width: 200px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.size {
+  flex: 1;
+  background: transparent;
+  padding: 0;
+}

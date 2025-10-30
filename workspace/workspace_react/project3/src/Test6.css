@@ -1,0 +1,10 @@
+.test6_container{
+  margin: 30px;
+}
+
+.test6_container > div{
+  background-color: #eeeeee;
+  width: 400px;
+  margin-bottom: 10px;
+  padding: 10px;
+}

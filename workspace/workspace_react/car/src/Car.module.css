@@ -1,0 +1,47 @@
+.container{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container > div:first-child{
+  margin-bottom:20px;
+}
+
+.input > div{
+  display: flex;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.input{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btn_div{
+  text-align: end;
+  margin-top: 10px;
+}
+
+.table_div > table{
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.table_div tbody > tr:nth-child(even){
+  background-color: #d6d6d6;
+  color: black;
+}
+
+.table_div tbody > tr:nth-child(odd){
+  background-color: #ececec;
+  color: black;
+}
+
+.table_div td{
+  border: 1px solid white;
+  padding: 10px 5px;
+}

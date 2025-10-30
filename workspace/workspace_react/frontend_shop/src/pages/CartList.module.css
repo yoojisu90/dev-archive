@@ -1,0 +1,44 @@
+.container{
+  width: 100%;
+  margin: 0px auto;
+}
+
+.cart_list_table{
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart_list_table td{
+  padding: 6px;
+  border: 1px solid black;
+  vertical-align: middle;
+}
+
+.item_info{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.select_div{
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.select_div > div{
+  display: flex;
+}
+
+.img{
+  width: 60px;
+}
+
+.cnt_div{
+  display: flex;
+  gap: 8px;
+}

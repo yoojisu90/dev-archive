@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+        <!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.green.backend_student.mapper.StuMapper">
+    <resultMap id="classInfo" type="com.green.backend_student.dto.ClassDTO">
+        <id column="CLASS_NUM" property="classNum"/>
+        <result column="CLASS_NAME" property="className"/>
+    </resultMap>
+
+    <!--1 : 1 -> association 태그 사용-->
+    <!--1 : n -> collection 태그 사용-->
+    <resultMap id="student" type="com.green.backend_student.dto.StuDTO">
+        <id column="STU_NUM" property="stuNum"/>
+        <result column="STU_NAME" property="stuName"/>
+        <result column="STU_AGE" property="stuAge"/>
+        <result column="CLASS_NUM" property="classNum"/>
+        <association property="classDTO" resultMap="classInfo"/>
+    </resultMap>
+
+    <!--학급 조회-->
+    <select id="getClassInfo" resultMap="classInfo">
+        SELECT
+            CLASS_NUM,
+            CLASS_NAME
+        FROM CLASS_INFO
+        ORDER BY CLASS_NUM
+    </select>
+
+    <!--학생 조회-->
+    <select id="getStuList" resultMap="student">
+        SELECT
+            STU_NUM,
+            STU_NAME,
+            STU_AGE,
+            CLASS_NAME
+        FROM STUDENT_INFO S INNER JOIN CLASS_INFO C
+        ON S.CLASS_NUM = C.CLASS_NUM
+        <!--if문 안에 작성된 변수는 무조건 getter를 호출-->
+        <if test="classNum != 0">
+        WHERE S.CLASS_NUM = #{classNum}
+        </if>
+    </select>
+
+
+
+
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

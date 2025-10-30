@@ -1,0 +1,35 @@
+.id_input{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tel_input{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.email_input{
+  display: flex;
+  gap: 10px;
+  
+}
+
+.addr_input{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.join_container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.error{
+  color: red;
+  font-size: 0.7rem;
+  line-height: 1;
+}

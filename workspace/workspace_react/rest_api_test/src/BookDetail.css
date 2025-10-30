@@ -1,0 +1,16 @@
+.info-table{
+  width: 100%;
+}
+
+.info td{
+  width: 25%;
+}
+
+.info td:nth-child(odd){
+  background-color: #dae2f3;
+}
+
+.info td:nth-child(even){
+  background-color: #e9ebf5;
+}
+

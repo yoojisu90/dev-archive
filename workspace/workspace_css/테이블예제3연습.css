@@ -1,0 +1,42 @@
+.container{
+  width: 900px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+}
+
+td{
+  padding: 15px 15px;
+  vertical-align: middle;
+}
+
+thead > tr{
+  border-top: 3px solid black;
+  border-bottom: 1px solid black;
+}
+
+tbody > tr{
+  border-bottom: 1px solid black;
+}
+
+tbody > tr > td:nth-child(3){
+  text-align: left;
+}
+
+tbody span{
+  background-color: #fff8ee;
+  color: orange;
+  padding: 5px
+}
+
+tbody > tr > td:nth-child(2){
+  color: blue;
+}
+
+tbody > tr > td:last-child{
+  color: gray
+}

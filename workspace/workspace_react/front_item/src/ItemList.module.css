@@ -1,0 +1,14 @@
+.container{
+	width: 700px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+table{
+	width: 100%;
+	border: 1px solid black;
+}
+
+tr,td{
+	border: 1px solid black;
+}

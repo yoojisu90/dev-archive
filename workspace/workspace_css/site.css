@@ -1,0 +1,120 @@
+.container{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.header{
+  height: 100px;
+  background-color: #0c51a6;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.header > ul{
+  display: flex;
+  width: 600px;
+  justify-content: space-around;
+  background-color: #0a4288;
+  padding: 16px 0px;
+}
+
+.banner > img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.banner{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner > div{
+  position: absolute;
+ 
+  color: white;
+  background-color: rgb(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.content{
+  display: flex;
+}
+
+.content > div{
+  width: 100%;
+}
+
+.notice{
+  background-color: #e5f1ff;
+  padding: 10px;
+}
+
+.notice > h2{
+  margin-bottom: 8px;
+}
+
+.notice > table{
+  width: 100%;
+}
+
+.notice td{
+  padding: 4px 0px;
+}
+
+.reserve{
+  position: relative;
+}
+
+.reserve > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 요소 크기의 반만큼 가로, 세로 이동 */
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+
+
+.reserve button{
+  border: none;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0, 0.4);
+  color: white;
+}
+
+.footer{
+  display: flex;
+  background-color: #eeeeee;
+  align-items: center;
+  padding: 30px;
+}
+
+.footer > h1{
+  width: 20%;
+  color: gray;
+}
+
+.footer > div{
+  width: 80%;
+  text-align: center;
+}
+
+.footer ul{
+  display: inline-flex;
+  gap: 16px;
+}
+
+
+

@@ -1,0 +1,21 @@
+.test7_container{
+  width: 400px;
+  margin: 30px;
+  text-align: center;
+  color: white;
+}
+
+.test7_container > :first-child{
+  height: 60px;
+  background-color: lightcoral;
+  margin-bottom: 10px;
+  line-height: 60px;
+  
+}
+
+.test7_container div{
+  height: 60px;
+  background-color: skyblue;
+  line-height: 60px;
+}
+

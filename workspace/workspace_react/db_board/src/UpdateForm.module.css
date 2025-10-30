@@ -1,0 +1,19 @@
+.update_container{
+  width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.update_container table{
+  background-color: #eaeef7;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.update_container input{
+  width: 100%;
+}
+
+.update_container textarea{
+  width: 100%;
+}

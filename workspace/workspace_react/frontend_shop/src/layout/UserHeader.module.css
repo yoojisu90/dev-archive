@@ -1,0 +1,46 @@
+.container{
+  height: 100%;
+}
+
+.login_div{
+  height: 15%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+}
+
+.login_div > span:hover{
+  cursor: pointer;
+}
+
+.banner_div{
+  height: 70%;
+  position: relative;
+}
+
+.menu_div{
+  height: 15%;
+}
+
+.banner_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 80%;
+}
+
+
+.banner_div > p{
+  position: absolute;
+  left: 18%;
+  top: 30%;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.banner_div:hover{
+  cursor: pointer;
+}

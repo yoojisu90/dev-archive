@@ -1,0 +1,28 @@
+.container{
+  width: 250px;
+  margin: 30px auto;
+}
+
+.container select,
+.container input[type="text"],
+.container textarea{
+  width: 100%;
+}
+
+.container > div{
+  margin-bottom: 12px;
+}
+
+.btn_div{
+  text-align: right;
+}
+
+.container textarea{
+  resize: none;
+  height: 80px;
+}
+
+.not_valid{
+  color: red;
+  font-size: 0.7rem;
+}

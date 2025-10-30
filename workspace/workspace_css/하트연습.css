@@ -1,0 +1,17 @@
+.img-div{
+  position: relative;
+  width: 700px;
+
+}
+
+img{
+  width: 100%;
+}
+
+.img1{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: red;
+  font-size: 2rem;
+}

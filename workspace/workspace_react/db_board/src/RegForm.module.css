@@ -1,0 +1,31 @@
+.reg_container{
+  margin: 20px auto;
+  width: 800px;
+  text-align: center;
+
+}
+
+.reg_table{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.reg_table input{
+  width: 100%;
+}
+
+.reg_table textarea{
+  width: 100%;
+}
+
+.reg_table tr:nth-child(odd){
+  background-color: #d2deee;
+}
+
+.reg_table tr:nth-child(even){
+  background-color: #eaeef7;
+}
+
+.reg_table td{
+  vertical-align: middle;
+}

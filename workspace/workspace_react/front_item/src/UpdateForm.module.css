@@ -1,0 +1,27 @@
+.container{
+  width: 250px;
+  margin: 30px auto;
+}
+
+.container select,
+.container input[type="text"],
+.container textarea{
+  width: 100%;
+}
+
+.container > div{
+  margin-bottom: 12px;
+}
+
+.btn_div{
+  text-align: right;
+}
+
+.btn_div > button{
+  margin-left: 10px;
+}
+
+.container textarea{
+  resize: none;
+  height: 80px;
+}

@@ -1,0 +1,26 @@
+.container{
+  width: 700px;
+  text-align: center;
+  margin: 20px;
+}
+
+.detail-table{
+  width: 100%;
+  border: 1px solid white;
+  background-color: skyblue;
+  margin-top: 10px;
+}
+
+.detail-table tr, .detail-table td{
+  border: 1px solid white;
+  padding: 10px 5px;
+  font-weight: bold;
+}
+
+.detail-table td:nth-child(even){
+  background-color: lightblue;
+}
+
+.detail-table td{
+  width: 25%;
+}

@@ -1,0 +1,38 @@
+.container{
+  width: 700px;
+  margin: 30px auto;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+}
+
+thead > tr{
+  border-top: 2px solid black;
+  border-bottom: 1px solid lightgray;
+}
+
+tbody > tr{
+  border-bottom: 1px solid lightgray;
+}
+
+td{
+  padding: 10px 4px;
+}
+
+tbody > tr > td:nth-child(3){
+  text-align: left;
+}
+
+tbody > tr:nth-child(even){
+  background-color: #eeeeee;
+}
+
+tbody > tr:hover{
+  background-color: #dddddd;
+}
+
+tbody > tr > td > span:hover{
+  cursor: pointer; /* 손가락모양 */
+}

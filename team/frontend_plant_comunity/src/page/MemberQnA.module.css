@@ -1,0 +1,69 @@
+.container {
+  width: 1280px;
+  margin: 0px auto;
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  min-height: calc(100vh - 200px);
+}
+
+.qnaTable {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-collapse: collapse;
+  background: #f8fdf8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.qnaTable thead {
+  background: linear-gradient(135deg, #66bb6a, #4caf50);
+}
+
+.qnaTable thead tr {
+  border: none;
+}
+.qnaTable thead td {
+  color: white;
+  font-weight: bold;
+}
+.qnaTable th {
+  padding: 16px 12px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.qnaTable tbody tr {
+  border-bottom: 1px solid #e8f5e9;
+  transition: all 0.2s ease;
+}
+
+.qnaTable tbody tr:hover {
+  background: #e8f5e9;
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
+}
+
+.qnaTable td {
+  padding: 14px 12px;
+  border: none;
+  color: #424242;
+  font-size: 0.9rem;
+}
+
+.qnaTable tbody tr:last-child {
+  border-bottom: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 10px;
+}

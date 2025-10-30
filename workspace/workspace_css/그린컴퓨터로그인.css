@@ -1,0 +1,43 @@
+.container{
+  width: 800px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  margin: 20px 20px;
+}
+
+.hh{
+  margin: 20px 20px;
+}
+
+.aaa{
+  display: flex;
+  background-color: white;
+  margin: 10px;
+}
+
+.d1{
+  background-color: #eeeeee;
+  width: 50%;
+  border-radius: 8px;
+  padding: 10px 10px;
+  margin: 20px 10px;
+}
+
+.d2{
+  width: 50%;
+  padding: 10px 10px;
+}
+
+.p1{
+  text-align: center;
+  background-color: skyblue;
+  border-radius: 8px;
+}
+.p2{
+  text-align: center;
+  color: green;
+}
+
+button{
+  border: 0;
+}

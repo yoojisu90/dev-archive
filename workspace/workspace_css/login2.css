@@ -1,0 +1,78 @@
+body{
+ background-color: lightcyan; 
+}
+
+.container{
+  width: 500px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px 1px #777777;
+}
+
+.id-div{
+  display: flex;
+  gap: 4px;
+}
+
+.id-div > input{
+  width: 70%;
+}
+
+.id-div > button{
+  width: 30%;
+  background-color: lightblue;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+input, select{
+  padding: 6px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  /* width: 100%; */
+}
+
+.wide-input{
+  width: 100%;
+}
+
+.info-div > div{
+  margin-bottom: 10px;
+}
+
+.info-div p{
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+p > span{
+  color: red;
+}
+
+.birth-div{
+  display: flex;
+  gap: 8px;
+}
+
+.birth-div > select{
+  width: 100%;
+}
+
+.email-div{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.email-div > input, select{
+  width: 100%;
+}
+
+.btn-div{
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+.list-table{
+  width: 100%;
+}
+
+.head{
+  background-color: #4471c4;
+  border-bottom: 3px solid white;
+  color: white;
+}
+
+tr, td{
+  border: 1px solid white;
+  padding: 8px 10px;
+  font-weight: 500;
+}
+
+.body > tr:nth-child(odd){
+  background-color: #cfd4ea;
+}
+
+.body > tr:nth-child(even){
+  background-color: #e9ebf5;
+}
+
+.body >tr:hover{
+  cursor: pointer;
+  color: white;
+}

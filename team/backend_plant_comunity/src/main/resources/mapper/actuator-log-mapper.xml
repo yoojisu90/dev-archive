@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.green.backend_plant_comunity.environment.mapper.ActuatorLogMapper">
+    <resultMap id="actuator" type="com.green.backend_plant_comunity.environment.dto.ActuatorLogDTO">
+        <id     column="LOG_ID"      property="logId"/>
+        <result column="ACT_NAME"    property="actName"/>
+        <result column="RASP_NUM"    property="raspNum"/>
+        <result column="STATE"       property="state"/>
+        <result column="MODE"        property="mode"/>
+        <result column="EVENT_TIME"  property="eventTime"/>
+    </resultMap>
+
+    <select id="getLogList" resultMap="actuator">
+        SELECT
+            LOG_ID,
+            ACT_NAME,
+            RASP_NUM,
+            STATE,
+            MODE,
+            EVENT_TIME
+        FROM ACTUATOR_LOG
+        ORDER BY EVENT_TIME DESC
+    </select>
+</mapper>

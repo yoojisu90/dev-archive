@@ -1,0 +1,15 @@
+.table{
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.table td{
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.table td:hover{
+  cursor: pointer;
+}

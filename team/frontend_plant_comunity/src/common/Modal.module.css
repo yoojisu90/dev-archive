@@ -1,0 +1,49 @@
+.modal_overlay {
+  position: fixed;
+  /* 전체 다 지정해야 화면이 꽉 차게 position 됨 */
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.modal_content {
+  margin-top: 30px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 30px 50px;
+  position: relative;
+}
+
+.close_btn {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #d1d1d1;
+  font-weight: 700;
+}
+
+.close_btn:hover {
+  cursor: pointer;
+}
+
+.content_div {
+  margin-top: 20px;
+}
+
+.modal_title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 3px;
+  margin-bottom: 0.7rem;
+  color: #2e7d32;
+  letter-spacing: -0.3px;
+}
