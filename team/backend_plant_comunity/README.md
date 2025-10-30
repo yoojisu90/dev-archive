@@ -1,4 +1,4 @@
-# 🌱 Plant Community Platform - backend
+# 🌱 GitHerb - 스마트 식물 커뮤니티 플랫폼 - backend - web
 
 > 식물 애호가들을 위한 종합 커뮤니티 플랫폼
 
