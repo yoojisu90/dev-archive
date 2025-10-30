@@ -1,4 +1,4 @@
-# 🌱 Plant Community Platform
+# 🌱 Plant Community Platform - backend
 
 > 식물 애호가들을 위한 종합 커뮤니티 플랫폼
 
