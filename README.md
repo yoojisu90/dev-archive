@@ -51,6 +51,12 @@ IoT 스마트팜 기술과 웹/모바일 커뮤니티 기능을 단계별로 구
 - **Database**: MariaDB 10.x
 - **Libraries**: Adafruit DHT, RPi.GPIO, mysql-connector-python, spidev
 
+## 📊 데이터베이스 설계
+
+### ERD (Entity Relationship Diagram)
+
+![ERD Diagram](./images/ERD관계도.png)
+
 #### 🛠 주요 구현 내용
 
 **하드웨어 구성**
