@@ -29,8 +29,8 @@ GitHerb는 식물 애호가들을 위한 종합 플랫폼으로, IoT 스마트�
 
 | 파트 | 링크 | 설명 |
 |------|------|------|
-| 🔙 Backend | [backend_plant_comunity]([./backend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/back_plant_community)) | Spring Boot API 서버 |
-| 💻 Frontend Web | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_community) | React 웹 애플리케이션 |
+| 🔙 Backend | [backend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/backtend_plant_comunity) | Spring Boot API 서버 |
+| 💻 Frontend Web | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_comunity) | React 웹 애플리케이션 |
 | 📱 Frontend Mobile | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) | React Native 모바일 앱 |
 
 ---
