@@ -1,496 +1,558 @@
-# 🌱 Plant Community Platform
+# 🌱 GitHerb - 식물 커뮤니티 플랫폼
 
-> 식물 애호가들을 위한 종합 커뮤니티 플랫폼
+> 3단계 프로젝트로 완성한 IoT 스마트팜 + 웹/모바일 커뮤니티 통합 플랫폼
 
 ![Java](https://img.shields.io/badge/Java-17-007396?style=flat-square&logo=java)
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.9-6DB33F?style=flat-square&logo=spring-boot)
-![MyBatis](https://img.shields.io/badge/MyBatis-3.0.5-000000?style=flat-square)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb)
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=flat-square&logo=react)
+![React Native](https://img.shields.io/badge/React%20Native-0.81.4-61DAFB?style=flat-square&logo=react)
 ![WebSocket](https://img.shields.io/badge/WebSocket-STOMP-010101?style=flat-square)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-IoT-C51A4A?style=flat-square&logo=raspberry-pi)
 
-## 📋 프로젝트 소개
+---
 
-식물을 사랑하는 사람들이 모여 정보를 공유하고, 일정을 관리하며, 실시간으로 소통할 수 있는 종합 커뮤니티 플랫폼입니다.
+## 📋 프로젝트 개요
 
-### 주요 기능
+GitHerb는 3단계 프로젝트로 진행되는 식물 애호가들을 위한 종합 플랫폼으로, 
+IoT 스마트팜 기술과 웹/모바일 커뮤니티 기능을 단계별로 구축했습니다.
 
-#### 🌿 핵심 기능
-- **식물 도감 및 관리**: 다양한 식물 정보 제공 및 개인 식물 관리
-- **커뮤니티 게시판**: 게시글 작성, 댓글, 좋아요 기능
-- **실시간 채팅**: WebSocket 기반 실시간 1:1 및 그룹 채팅
-- **팔로우 시스템**: 관심있는 사용자 팔로우 및 피드 확인
+- **1️⃣ IoT 기기 개발**: Raspberry Pi 센서 수집 및 자동 제어 알고리즘
+- **2️⃣ 웹 플랫폼**: React 기반 스마트팜 관리 및 커뮤니티 구축
+- **3️⃣ 모바일 앱**: React Native 기반 IoT 연동 및 실시간 채팅
 
-#### 📅 일정 관리
-- **식물 관리 캘린더**: 물주기, 영양제, 분갈이 일정 관리
-- **한국 공휴일 연동**: 자동 공휴일 표시 및 일정 조정
+---
 
-#### ☀️ 날씨 연동
-- **Kakao API 연동**: 실시간 날씨 정보 제공
-- **식물 관리 알림**: 날씨에 따른 식물 관리 팁 제공
+## 🎯 프로젝트 단계별 구성
 
-#### 🔔 메시지 시스템
-- **알림 기능**: 댓글, 좋아요, 팔로우 알림
-- **쪽지 기능**: 사용자 간 개인 메시지
+### 📅 Timeline
 
-## 🛠 기술 스택
+| 단계 | 기간 | 주제 | 기술 스택 |
+|------|------|------|---------|
+| **1️⃣ IoT 개발** | 2025.09.11 ~ 09.24 | 스마트팜 IoT 기기 개발 및 자동제어 알고리즘 구축 | Python, Raspberry Pi, GPIO, MySQL |
+| **2️⃣ 웹 개발** | 2025.09.25 ~ 10.16 | React 기반 식물 커뮤니티 구축 (웹) | React, Spring Boot, MariaDB, Chart.js |
+| **3️⃣ 앱 개발** | 2025.10.17 ~ 11.14 | React Native 기반 IoT 연동 및 실시간 채팅 | React Native, Expo, WebSocket, Spring Boot |
 
-### Backend
-- **Framework**: Spring Boot 3.4.9
-- **Language**: Java 17
-- **ORM**: MyBatis 3.0.5
-- **Database**: MariaDB
-- **Real-time**: WebSocket (STOMP)
+---
 
-### Library & Tools
-- **Lombok**: 보일러플레이트 코드 감소
-- **JSoup**: HTML 파싱 및 이미지 추출
-- **Log4jdbc**: SQL 쿼리 로깅
-- **Date-holidays**: 한국 공휴일 처리
+## 🔗 단계별 프로젝트 상세
 
-### API
-- **Kakao API**: 날씨 정보 제공
+### 1️⃣ IoT 기기 개발 (2025.09.11 ~ 09.24)
 
-## 📁 프로젝트 구조
+#### 🎯 프로젝트 목표
+- Raspberry Pi와 센서를 활용한 실시간 환경 모니터링 시스템 구축
+- 식물 최적 환경 조건에 맞춘 자동 제어 알고리즘 개발
+- 센서 데이터 정확성 95% 이상 달성
 
+#### 💻 기술 스택
+- **Hardware**: Raspberry Pi, DHT-22 (온습도), LDR+ADC (조도), 토양수분 센서
+- **Language**: Python 3.9+
+- **Database**: MariaDB 10.x
+- **Libraries**: Adafruit DHT, RPi.GPIO, mysql-connector-python, spidev
+
+#### 🛠 주요 구현 내용
+
+**하드웨어 구성**
 ```
-src/main/java/com/green/backend_plant_comunity/
-├── board/          # 게시판 기능
-├── calendar/       # 캘린더 및 일정 관리
-├── category/       # 카테고리 관리
-├── chat/           # 실시간 채팅
-├── comment/        # 댓글 시스템
-├── environment/    # 환경 설정
-├── follow/         # 팔로우 시스템
-├── like/           # 좋아요 기능
-├── member/         # 회원 관리
-├── message/        # 메시지/알림
-├── plant/          # 식물 정보 관리
-├── weather/        # 날씨 정보
-├── config/         # 설정 파일
-│   ├── WebConfig.java
-│   └── WebSocketConfig.java
-└── util/           # 유틸리티
-    ├── FileUploadUtil.java
-    ├── HtmlImageParser.java
-    └── ImageCleanupScheduler.java
+Raspberry Pi
+├── GPIO (온습도 센서, LED, 펌프, 팬 제어)
+├── SPI (LDR 센서 - 조도 측정)
+└── I2C (토양 수분 센서)
 ```
 
-## 🚀 주요 구현 사항
+**센서 데이터 수집 (1초 주기)**
 
-### 1. 실시간 채팅 시스템
-```java
-// WebSocket STOMP 프로토콜을 활용한 실시간 양방향 통신 구현
-- 1:1 채팅 및 그룹 채팅 지원
-- 메시지 읽음 처리
-- 온라인 상태 표시
+```python
+def read_dht_with_retry(max_retries=3, delay=2):
+    """DHT-22 센서에서 온습도 데이터 수집 (재시도 로직)"""
+    for attempt in range(max_retries):
+        try:
+            temp = sensor_dht.temperature
+            humid = sensor_dht.humidity
+            
+            if temp is not None and humid is not None:
+                return temp, humid
+            
+            time.sleep(delay)
+        except RuntimeError as e:
+            print(f"DHT error {attempt + 1}: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(delay)
+    
+    return None, None
 ```
 
-### 2. 이미지 관리 시스템
-```java
-// 게시글 작성 시 업로드된 이미지 자동 관리
-- HTML 컨텐츠에서 이미지 추출 (JSoup)
-- 미사용 이미지 자동 삭제 스케줄러
-- 파일 업로드 유틸리티
+**환경 데이터 계산**
+
+```python
+def calculate_ldr_resistance(adc_value):
+    """ADC 값을 LDR 저항으로 변환"""
+    resistance_ldr = R_FIXED * (adc_value / (1024.0 - adc_value))
+    return resistance_ldr
+
+def convert_resistance_to_lux(ldr_resistance):
+    """LDR 저항을 조도(Lux)로 변환"""
+    lux = CALIBRATION_CONSTANT_LUX * ldr_resistance
+    return int(lux)
+
+def soil_moisture_percent(raw_value):
+    """토양 수분 센서 값을 퍼센트로 변환"""
+    moisture_percent = ((SOIL_MAX - raw_value) / (SOIL_MAX - SOIL_MIN)) * 100
+    return round(max(0, min(100, moisture_percent)), 1)
 ```
 
-### 3. 캘린더 일정 관리
-```java
-// 식물 관리를 위한 개인 일정 시스템
-- 물주기, 영양제, 분갈이 일정 등록
-- 반복 일정 설정
+**자동 제어 알고리즘**
+
+```python
+def auto_control_pump(soil_moisture_percent_value):
+    """토양 수분 기반 펌프 자동 제어"""
+    if soil_moisture_percent_value < BASIL_OPTIMAL_SOIL_MOISTURE_MIN:
+        pump_on()  # 물주기
+    else:
+        pump_off()
+
+def auto_control_fan(temperature, humidity):
+    """온습도 기반 선풍기 자동 제어"""
+    if (temperature > BASIL_OPTIMAL_TEMP_MAX) or \
+       (humidity > BASIL_OPTIMAL_HUMIDITY_MAX):
+        fan_on()  # 환기
+    else:
+        fan_off()
+
+def auto_control_led(lux_out_of_range):
+    """조도 기반 LED 보조 조명 자동 제어"""
+    if lux_out_of_range:
+        led_on()  # 보조 조명
+    else:
+        led_off()
+```
+
+#### 📊 주요 성과
+- ✅ 센서 데이터 수집 성공률 **95% 이상** 달성
+- ✅ null 값 필터링으로 DB 오류 데이터 완전 제거
+- ✅ 3회 재시도 로직으로 안정성 확보
+- ✅ 바질(Basil) 최적 환경 조건 기반 자동 제어
+
+#### 📁 프로젝트 구조
+```
+workspace/
+├── iot_sensor_collection.py      # 메인 센서 수집 로직
+├── sensor_config.py              # 센서 설정
+├── actuator_control.py           # 액추에이터 제어
+└── database_schema.sql           # MariaDB 테이블 정의
+```
+
+#### 🎥 시연 영상
+- [IoT 센서 데이터 수집 시연](https://youtube.com/watch?v=xxx) (예정)
+- [자동 제어 알고리즘 시연](https://youtube.com/watch?v=xxx) (예정)
+
+---
+
+### 2️⃣ React 웹 개발 (2025.09.25 ~ 10.16)
+
+#### 🎯 프로젝트 목표
+- IoT 센서 데이터를 시각화하는 웹 대시보드 구축
+- 식물 커뮤니티 및 게시판 기능 개발
+- 실시간 쪽지 시스템 구현
+
+#### 💻 기술 스택
+- **Frontend**: React 18.2.0, Vite, Axios
+- **UI/Visualization**: Chart.js, React Big Calendar, React Quill
+- **Backend**: Spring Boot 3.4.9
+- **Database**: MariaDB 10.x
+- **API**: RESTful API + Proxy
+
+#### 🛠 주요 구현 내용
+
+**MyFarm - 스마트팜 관리**
+- 1초 주기 실시간 센서 데이터 갱신
+- 온도, 습도, 조도, 토양수분 시각화
+- 식물별 최적 환경 조건 표시 (🟢 적합 / 🔴 부적합)
+
+```javascript
+// 센서 데이터 실시간 갱신
+useEffect(() => {
+  const interval = setInterval(async () => {
+    const data = await fetchSensorData();
+    setSensorData(data);
+  }, 1000);
+  
+  return () => clearInterval(interval);
+}, []);
+```
+
+**Chart.js 데이터 시각화**
+- 온도/습도/토양수분: 영역 차트 (트렌드)
+- 조도: 막대 차트 (비교)
+- 기간별 데이터 집계 (오늘/7일/30일)
+
+**커뮤니티 게시판**
+- React Quill 리치 텍스트 에디터
+- 이미지 업로드 및 관리
+- 댓글 및 대댓글 지원
+- 좋아요 시스템
+
+**마이페이지 - 식물 캘린더**
+- React Big Calendar 통합
+- 물주기 반복 일정 설정
+- 식물 다이어리 작성
 - 한국 공휴일 자동 표시
+
+**쪽지 시스템**
+- 받은/보낸 쪽지 분리 관리
+- 3가지 발송 모드 (단일/다중/전체)
+- 실시간 읽지 않은 쪽지 알림
+- 100초마다 자동 갱신
+
+#### 📊 주요 성과
+- ✅ 1초 주기 센서 데이터 실시간 갱신
+- ✅ 아름다운 Chart.js 그래프 시각화
+- ✅ 직관적인 캘린더 기반 일정 관리
+- ✅ 이벤트 기반 크로스 컴포넌트 실시간 업데이트
+
+#### 📁 프로젝트 구조
+```
+frontend_plant_comunity/
+├── src/page/
+│   ├── MyFarm/                   # 스마트팜 관리
+│   │   ├── MyPlantInfo.jsx       # 센서 데이터
+│   │   └── EnvironmentInfo.jsx   # 그래프 시각화
+│   ├── Board/                    # 게시판
+│   ├── MyPage/                   # 마이페이지
+│   │   ├── Calendar.jsx          # 캘린더
+│   │   └── Diary.jsx             # 다이어리
+│   └── Main.jsx                  # 홈 화면
+├── components/
+│   └── message/                  # 쪽지 시스템
+└── vite.config.js
 ```
 
-### 4. 소셜 기능
-```java
-// 사용자 간 상호작용 기능
-- 팔로우/언팔로우
-- 좋아요 및 북마크
-- 댓글 시스템
+#### 🎥 시연 영상
+- [MyFarm 센서 시각화](https://youtube.com/watch?v=xxx) (예정)
+- [게시판 및 커뮤니티](https://youtube.com/watch?v=xxx) (예정)
+- [캘린더 및 쪽지](https://youtube.com/watch?v=xxx) (예정)
+
+---
+
+### 3️⃣ React Native 앱 개발 (2025.10.17 ~ 11.14)
+
+#### 🎯 프로젝트 목표
+- 크로스 플랫폼 모바일 앱 개발 (iOS/Android)
+- WebSocket 기반 실시간 채팅 시스템 구현
+- IoT 데이터와 커뮤니티 기능의 완전한 통합
+
+#### 💻 기술 스택
+- **Framework**: React Native 0.81.4, Expo ~54.0.13
+- **Routing**: Expo Router ~6.0.11
+- **Real-time**: WebSocket (@stomp/stompjs), SockJS
+- **HTTP Client**: Axios
+- **Storage**: AsyncStorage
+- **Backend**: Spring Boot 3.4.9
+
+#### 🛠 주요 구현 내용
+
+**실시간 채팅 시스템**
+
+```javascript
+// WebSocket 연결 (싱글톤 패턴)
+connect(onConnected, onError) {
+  if (this.client && (this.connected || this.client.active)) {
+    console.log('WebSocket이 이미 연결되어 있습니다');
+    if (onConnected) onConnected();
+    return;
+  }
+
+  // 기존 클라이언트 정리
+  if (this.client) {
+    try {
+      this.client.deactivate();
+    } catch (e) {
+      console.warn('기존 클라이언트 정리 중 에러:', e);
+    }
+  }
+  
+  // 새로운 연결 생성
+  this.client = new Client({
+    brokerURL: 'ws://192.168.30.97:8080/ws',
+    onConnect: onConnected,
+    onError: onError
+  });
+  
+  this.client.activate();
+}
 ```
 
-## ⚙️ 설치 및 실행
+**1:1 및 그룹 채팅**
+- 동적 채팅방 이름 생성
+- 프로필 이미지 그리드 (2x2)
+- 메시지 타입 지원 (텍스트/이미지/파일)
+- 이미지 전체화면 뷰어
+- 파일 다운로드/열기
 
-### 필수 요구사항
-- Java 17 이상
-- MariaDB 10.x
-- Gradle 8.x
+**채팅방 목록 실시간 업데이트**
 
-### 설정 파일
+```javascript
+// 메시지 수신 시 FlatList 강제 리렌더링
+const [refreshKey, setRefreshKey] = useState(0);
 
-`src/main/resources/application.properties`
-```properties
-# 데이터베이스 설정
-spring.datasource.url=jdbc:mariadb://localhost:3306/your_database
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+// 새 메시지 수신
+onStompMessage(() => {
+  setRefreshKey(prev => prev + 1);
+});
 
-# 파일 업로드 경로
-file.upload-dir=/path/to/upload/directory
-
-# Kakao API Key
-kakao.api.key=your_kakao_api_key
+<FlatList
+  key={refreshKey}
+  extraData={refreshKey}
+  keyExtractor={(item) => `${item.roomId}-${refreshKey}`}
+/>
 ```
 
-### 실행 방법
+**게시판 및 커뮤니티**
+- 게시글 작성/수정/삭제
+- 댓글 및 대댓글
+- 좋아요 시스템
+- 검색 기능
 
+**마이페이지**
+- 프로필 관리
+- 내가 쓴 글 목록
+- 캘린더 일정 관리
+
+#### 📊 주요 성과
+- ✅ WebSocket 싱글톤으로 안정적인 연결 관리
+- ✅ FlatList 최적화로 효율적 리렌더링
+- ✅ 다양한 메시지 타입 처리 (텍스트/이미지/파일)
+- ✅ 크로스 플랫폼 호환성 (iOS/Android)
+
+#### 📁 프로젝트 구조
+```
+app_plant_community/
+├── app/
+│   ├── (tabs)/
+│   │   ├── (home)/               # 홈/게시판
+│   │   ├── chat/                 # 실시간 채팅
+│   │   ├── myFarm/               # 나의 농장
+│   │   └── myPage/               # 마이페이지
+│   └── auth/                     # 인증
+├── utils/
+│   ├── api.js                    # API 요청
+│   ├── storage.js                # AsyncStorage
+│   └── websocket.js              # WebSocket 서비스
+└── components/                   # 재사용 컴포넌트
+```
+
+#### 🎥 시연 영상
+- [실시간 채팅 시스템](https://youtube.com/watch?v=xxx) (예정)
+- [1:1 및 그룹 채팅](https://youtube.com/watch?v=xxx) (예정)
+- [게시판 및 커뮤니티](https://youtube.com/watch?v=xxx) (예정)
+- [MyFarm 모바일 버전](https://youtube.com/watch?v=xxx) (예정)
+
+---
+
+## 🛠 기술 스택 통합도
+
+```
+┌─────────────────────────────────────────────┐
+│         1️⃣ IoT 기기 개발                     │
+│   Python + Raspberry Pi + GPIO/SPI          │
+│   (센서 수집 → 자동 제어)                    │
+└──────────────────┬──────────────────────────┘
+                   ↓ MariaDB
+┌──────────────────┴──────────────────────────┐
+│      Backend (Spring Boot + Java)            │
+│  ├─ RESTful API (회원, 게시판, 채팅)        │
+│  ├─ WebSocket (실시간 채팅)                 │
+│  └─ 데이터 관리 (MyBatis + MariaDB)         │
+└──────┬────────────────────────┬─────────────┘
+       ↓                        ↓
+  ┌──────────────┐       ┌──────────────────┐
+  │ 2️⃣ 웹 개발   │       │  3️⃣ 앱 개발     │
+  │ (React)      │       │ (React Native)   │
+  │              │       │                  │
+  │ - MyFarm     │       │ - 채팅           │
+  │ - 게시판     │       │ - 게시판         │
+  │ - 캘린더     │       │ - MyFarm         │
+  │ - 쪽지       │       │ - iOS/Android    │
+  └──────────────┘       └──────────────────┘
+```
+
+---
+
+## 📊 데이터베이스 스키마
+
+### 1️⃣ IoT 단계에서 생성
+- `sensor_data`: 센서 원본 데이터
+- `actuator_log`: 액추에이터 작동 로그
+- `actuator_control`: 제어 명령
+
+### 2️⃣ 웹 개발 단계에서 추가
+- `member`: 회원 정보
+- `board`: 게시물
+- `comment`: 댓글
+- `message`: 쪽지
+- `calendar`: 일정
+
+### 3️⃣ 앱 개발 단계에서 추가
+- `chat_room`: 채팅방
+- `chat_message`: 메시지
+- `chat_participant`: 참여자
+
+---
+
+## 🎓 학습 내용 총정리
+
+### 1️⃣ IoT 개발 학습
+- Raspberry Pi GPIO/SPI 프로토콜
+- 센서 데이터 수집 및 신호 처리
+- 데이터베이스 연동
+- 자동 제어 알고리즘 설계
+
+### 2️⃣ 웹 개발 학습
+- React 상태 관리 및 Hooks
+- 데이터 시각화 (Chart.js)
+- 캘린더/다이어리 기능
+- RESTful API 설계
+
+### 3️⃣ 모바일 개발 학습
+- React Native 크로스 플랫폼 개발
+- WebSocket 실시간 통신
+- Expo 프레임워크
+- 모바일 최적화
+
+---
+
+## 🔗 프로젝트 링크
+
+| 단계 | 파트 | 링크 |
+|------|------|------|
+| 1️⃣ | IoT 기기 | [workspace](https://github.com/yoojisu90/portfolio/tree/main/team/workspace) |
+| 2️⃣ | 웹 프론트 | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_comunity) |
+| 3️⃣ | 앱 프론트 | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) |
+| 백엔드 | 공통 | [backend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/backend_plant_comunity) |
+
+---
+
+## 🚀 설치 및 실행
+
+### 1️⃣ IoT 기기 (Raspberry Pi)
 ```bash
-# 1. 저장소 클론
-git clone https://github.com/yourusername/plant-community.git
+# Python 의존성 설치
+pip install adafruit-circuitpython-dht mysql-connector-python RPi.GPIO spidev
 
-# 2. 프로젝트 디렉토리로 이동
-cd plant-community
+# 스크립트 실행
+python iot_sensor_collection.py
+```
 
-# 3. Gradle 빌드
-./gradlew build
+### 2️⃣ 웹 프론트엔드
+```bash
+cd frontend_plant_comunity
+npm install
+npm run dev
+```
 
-# 4. 애플리케이션 실행
+### 3️⃣ 모바일 앱
+```bash
+cd app_plant_community
+npm install
+npm start
+```
+
+### 백엔드 (모든 단계 공용)
+```bash
+cd backend_plant_comunity
 ./gradlew bootRun
 ```
 
-서버는 `http://localhost:8080` 에서 실행됩니다.
-
-## 📊 ERD 및 API 명세
-![회원가입](screenshots/프로젝트ERD관계도.png)
-
-### 📡 API 엔드포인트 정리
-
-#### 1️⃣ Member API (회원 관리)
-
-**인증**
-- `POST /members` - 회원가입
-- `GET /members/login` - 로그인
-- `GET /members/{memId}` - 회원 상세정보 조회
-
-**중복검사**
-- `GET /members/checkId/{memId}` - 아이디 중복검사
-- `GET /members/checkTell/{memTell}` - 연락처 중복검사
-- `GET /members/checkBusinessNum/{memBusinessNum}` - 사업자번호 중복검사
-
-**회원정보 관리**
-- `PUT /members/{memId}` - 회원정보 수정
-- `PUT /members/{memId}/withdraw` - 회원 탈퇴
-- `GET /members/findId` - 아이디 찾기
-- `GET /members/findPw` - 비밀번호 찾기
-
-**프로필 이미지**
-- `POST /members/profile-image` - 프로필 이미지 업로드 (JPG/JPEG/PNG, 최대 10MB)
-- `GET /members/profile-image/{memId}` - 프로필 이미지 조회
-
-**관리자 기능**
-- `GET /members/admin` - 전체 활성 회원 목록
-- `GET /members/admin/deleted` - 삭제/탈퇴 회원 목록
-- `GET /members/status/{memId}` - 회원 상태 확인
-- `PUT /members/admin/{memId}/delete` - 회원 삭제
-- `PUT /members/admin/{memId}/restore` - 회원 복구
-
 ---
 
-#### 2️⃣ Board API (게시판)
+## 👥 팀 정보
 
-**게시글 CRUD**
-- `POST /boards` - 게시글 등록
-- `GET /boards/{memId}` - 마이팜 게시글 조회
-- `GET /boards/boardList-paging` - 페이징 목록 조회
-- `GET /boards/boardDetail/{boardNum}` - 게시글 상세 조회 (조회수 자동 증가)
-- `PUT /boards/boardDetail/{boardNum}` - 게시글 수정
-- `DELETE /boards/boardDetail/{boardNum}` - 게시글 삭제 (사용자)
-- `DELETE /boards/{boardNum}` - 게시글 삭제 (관리자)
+**프로젝트명**: GitHerb - 식물 커뮤니티 플랫폼
+**총 개발 기간**: 2025.09.11 ~ 2025.11.14 (65일)
+**총 개발 인원**: 1명 (풀 스택 개발)
 
-**특수 조회**
-- `GET /boards` - 홈화면 인기글 조회
-- `GET /boards/boardList` - 전체 게시글 조회
+### 단계별 개발 인력
 
-**이미지 관리**
-- `POST /boards/upload/img` - 게시글 작성 시 이미지 미리 등록 (MultipartFile)
+#### 1️⃣ IoT 기기 개발 (14일)
+- Python IoT 프로그래밍
+- Raspberry Pi 하드웨어 제어
+- 센서 알고리즘 개발
 
----
+#### 2️⃣ React 웹 개발 (22일)
+- 프론트엔드 UI/UX 구현
+- 데이터 시각화
+- 커뮤니티 기능 개발
 
-#### 3️⃣ Chat API (실시간 채팅)
+#### 3️⃣ React Native 앱 개발 (29일)
+- 크로스 플랫폼 모바일 앱 개발
+- 실시간 채팅 시스템 구현
+- iOS/Android 최적화
 
-**채팅방 관리**
-- `POST /api/chat/room/direct` - 1:1 채팅방 생성 (memId1, memId2 필수)
-- `POST /api/chat/room/group` - 단체 채팅방 생성 (roomName, memberIds 필수)
-- `GET /api/chat/room/{roomId}` - 채팅방 조회
-- `GET /api/chat/rooms/{memId}` - 내 채팅방 목록
-
-**메시지 관리**
-- `POST /api/chat/message` - 메시지 전송
-- `GET /api/chat/messages/{roomId}` - 메시지 목록 (페이징: page, size)
-- `DELETE /api/chat/message/{msgId}` - 메시지 삭제
-- `GET /api/chat/unread/{memId}/{roomId}` - 안 읽은 메시지 수
-
-**참여자 관리**
-- `POST /api/chat/room/{roomId}/participant/{memId}` - 참여자 추가
-- `GET /api/chat/room/{roomId}/participants` - 참여자 목록
-- `DELETE /api/chat/room/{roomId}/leave/{memId}` - 채팅방 나가기
-
-**읽음 처리 & 파일**
-- `PUT /api/chat/room/{roomId}/read/{memId}` - 메시지 읽음 표시
-- `POST /api/chat/upload` - 채팅 파일 업로드 (file, roomId, senderId 필수)
+### 핵심 성과
+- ✅ 3단계 프로젝트로 점진적 기능 확장
+- ✅ IoT → 웹 → 모바일로 이어지는 통합 시스템
+- ✅ 센서 데이터 수집 성공률 95% 이상
+- ✅ 500+ 라인 파이썬 코드
+- ✅ 3000+ 라인 React 코드
+- ✅ 2000+ 라인 React Native 코드
+- ✅ 15+ RESTful API 엔드포인트
 
 ---
-
-#### 4️⃣ Weather API (날씨)
-
-**좌표 변환**
-- `GET /api/weather/geocode` - 주소를 좌표로 변환 (Kakao API 활용)
-
----
-
-### 주요 테이블
-- `member`: 회원 정보
-- `board`: 게시글
-- `comment`: 댓글
-- `plant`: 식물 정보
-- `calendar`: 일정 관리
-- `chat_room`: 채팅방
-- `message`: 메시지/알림
-- `follow`: 팔로우 관계
-- `board_like`: 좋아요
-
-## 🎯 핵심 기능 시연
-
-### 1️⃣ 메인 화면
-> 직관적인 UI/UX로 식물 커뮤니티의 모든 기능에 쉽게 접근
-
-![메인화면](screenshots/홈화면.PNG)
-<!-- 또는 GIF: ![메인화면](screenshots/main.gif) -->
-
-**구현 기술**
-- RESTful API를 통한 데이터 페칭
-- 반응형 레이아웃 설계
-- 최신 게시글, 인기 게시글 실시간 업데이트
-
-**주요 기능**
-- 📊 대시보드 형태의 정보 표시
-- 🔍 통합 검색 기능
-- 🎨 카테고리별 필터링
-- ⚡ 빠른 네비게이션
-
----
-
-### 2️⃣ 회원가입 및 로그인
-> 안전하고 편리한 사용자 인증 시스템
-
-![회원가입](screenshots/회원가입.png)
-![아이디,비번찾기](screenshots/아이디,비밀번호 찾기.png)
-![회원정보수정](screenshots/회원정보수정.png)
-
-**구현 기술**
-- Spring Boot 기반* *세션 관리
-- 비밀번호 암호화 (BCrypt 예정)
-- 유효성 검증 (Validation)
-- MyBatis를 활용한 회원 정보 관리
-
-**주요 기능**
-- ✅ 실시간 중복 확인 (아이디, 이메일)
-- 🔒 안전한 비밀번호 정책
-- 📧 이메일 형식 검증
-- 🎭 프로필 이미지 업로드
-
-**API 엔드포인트**
-```java
-POST /api/members/signup    // 회원가입
-POST /api/members/login      // 로그인
-GET  /api/members/check      // 중복 확인
-POST /api/members/logout     // 로그아웃
-```
-
----
-
-### 3️⃣ 실시간 채팅
-> WebSocket STOMP 프로토콜 기반의 실시간 양방향 통신
-
-![쪽지보내기](screenshots/쪽지보내기.PNG)
-![쪽지세부사항](screenshots/쪽지세부사항.PNG)
-![쪽지답장](screenshots/쪽지답장.PNG)
-
-**구현 기술**
-- **WebSocket + STOMP**: 실시간 메시지 전송/수신
-- **SockJS**: WebSocket을 지원하지 않는 브라우저 대응
-- **메시지 브로커**: 효율적인 메시지 라우팅
-- **MyBatis**: 채팅 내역 영구 저장
-
-**핵심 구현 코드**
-```java
-@Configuration
-@EnableWebSocketMessageBroker
-public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
-    @Override
-    public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/topic", "/queue");
-        config.setApplicationDestinationPrefixes("/app");
-    }
-    
-    @Override
-    public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws")
-                .setAllowedOriginPatterns("*")
-                .withSockJS();
-    }
-}
-```
-
-**주요 기능**
-- 💬 1:1 개인 채팅
-- 👥 그룹 채팅방 생성
-- ✅ 메시지 읽음 처리
-- 🟢 실시간 접속 상태 표시
-- 📎 파일 및 이미지 전송
-- ⏰ 메시지 타임스탬프
-- 🔔 새 메시지 알림
-
-**메시지 흐름**
-```
-Client ─────> STOMP ─────> Message Broker ─────> Subscribers
-   └─ Send      └─ /app/chat    └─ /topic/messages    └─ Receive
-```
-
-**실시간 통신 프로세스**
-1. 클라이언트가 WebSocket 연결 수립
-2. STOMP 프로토콜로 채팅방 구독 (/topic/chat/{roomId})
-3. 메시지 발송 (/app/chat/send)
-4. 서버에서 메시지 처리 및 DB 저장
-5. 구독자들에게 실시간 브로드캐스트
-
----
-
-### 4️⃣ 식물 도감, 환경데이터
-> 다양한 식물 정보를 제공하는 백과사전
-
-![식물정보, 작동로그](screenshots/식물선택,작동로그.png)
-![환경그래프](screenshots/환경그래프.png)
-
-**구현 기술**
-- RESTful API 설계
-- 페이지네이션 처리
-- 검색 및 필터링 최적화
-- 이미지 최적화 및 로딩
-
-**주요 기능**
-- 🔍 식물명 검색 (한글, 학명)
-- 📑 카테고리별 분류
-    - 관엽식물
-    - 다육식물
-    - 허브
-    - 꽃식물
-- 📊 난이도별 필터 (초급/중급/고급)
-- 💧 물주기 정보
-- ☀️ 햇빛 요구량
-- 🌡️ 적정 온도/습도
-- ⭐ 사용자 평점 및 리뷰
-- 📚 상세 재배 가이드
-
-**API 엔드포인트**
-```java
-GET  /api/plants              // 식물 목록 조회
-GET  /api/plants/{id}         // 식물 상세 조회
-GET  /api/plants/search       // 식물 검색
-GET  /api/plants/category     // 카테고리별 조회
-POST /api/plants/{id}/review  // 리뷰 작성
-```
-
-**데이터 구조**
-```java
-//식물 정보 테이블 생성
-CREATE TABLE CROP_STANDARDS(
-  HERB_NUM INT PRIMARY KEY AUTO_INCREMENT, #작물 ID
-  HERB_NAME VARCHAR(50) NOT NULL, #작물 이름
-  TEMP_MIN FLOAT NOT NULL, #최저 온도
-  TEMP_MAX FLOAT NOT NULL, #최대 온도
-  HUMID_MIN FLOAT NOT NULL, #최저 습도
-  HUMID_MAX FLOAT NOT NULL, #최대 습도
-  SOIL_MIN FLOAT NOT NULL, #최소 토양 수분
-  SOIL_MAX FLOAT NOT NULL, #최대 토양 수분
-  LUX_MIN INT NOT NULL, #최소 조도
-  LUX_MAX INT NOT NULL, #최대 조도
-  IMG_NAME VARCHAR(100) NOT NULL #작물 이미지
-);
-
-//식물 데이터 삽입
-INSERT INTO CROP_STANDARDS	(
-  HERB_NAME, TEMP_MIN, TEMP_MAX, HUMID_MIN, HUMID_MAX
-  , SOIL_MIN, SOIL_MAX, LUX_MIN, LUX_MAX, IMG_NAME
-  ) VALUES(
-  '바질', 20, 30, 40, 60, 25, 40, 20000, 60000, '바질.jfjf'),
-  ('로즈마리', 15, 25, 30, 50, 10, 20, 30000, 70000, '로즈마리.jfjf'),
-  ('라벤더', 15, 25, 30, 50, 10, 20, 30000, 70000, '라벤더.jfjf'),
-  ('민트', 15, 25, 50, 70, 30, 45, 15000, 40000, '민트.jfjf'),
-  ('타임', 15, 25, 30, 50, 10, 20, 20000, 60000, '타임.jfjf'),
-  ('파슬리', 15, 25, 40, 60, 20, 35, 15000, 40000, '파슬리.jfjf'
-);
-```
-
----
-
-## 💡 기술적 구현 포인트
-
-### WebSocket 실시간 통신
-```java
-@MessageMapping("/chat/send")
-@SendTo("/topic/messages")
-public ChatMessageDTO sendMessage(ChatMessageDTO message) {
-    // 메시지 DB 저장
-    chatService.saveMessage(message);
-    // 실시간 브로드캐스트
-    return message;
-}
-```
-
-### 세션 기반 인증
-```java
-@PostMapping("/login")
-public ResponseEntity<?> login(@RequestBody LoginDTO dto, HttpSession session) {
-    Member member = memberService.authenticate(dto);
-    if (member != null) {
-        session.setAttribute("loginMember", member);
-        return ResponseEntity.ok().build();
-    }
-    return ResponseEntity.status(401).build();
-}
-```
-
-### 페이지네이션 처리
-```java
-@GetMapping("/plants")
-public ResponseEntity<PageResponseDTO<PlantDTO>> getPlants(
-    @RequestParam(defaultValue = "1") int page,
-    @RequestParam(defaultValue = "12") int size) {
-    
-    PageRequestDTO pageRequest = new PageRequestDTO(page, size);
-    PageResponseDTO<PlantDTO> response = plantService.getPlantList(pageRequest);
-    return ResponseEntity.ok(response);
-}
-```
-
-## 🔧 개선 및 확장 계획
-
-- [ ] Spring Security 적용한 인증/인가 시스템
-- [ ] Redis 캐싱 도입으로 성능 최적화
-- [ ] 알림 기능 고도화 (FCM 연동)
-- [ ] 식물 AI 진단 기능
 
 ## 📝 개발 환경
 
-- **IDE**: IntelliJ IDEA
-- **Build Tool**: Gradle
+### 1️⃣ IoT 개발
+- **하드웨어**: Raspberry Pi 3/4
+- **OS**: Raspberry Pi OS (Debian 기반)
+- **언어**: Python 3.9+
+- **라이브러리**: Adafruit DHT, RPi.GPIO, spidev
+
+### 2️⃣ 웹 개발
+- **IDE**: VS Code
+- **Frontend**: React 18.2.0, Vite 7.1.2, Node.js 16.x
+- **Backend**: IntelliJ IDEA, Spring Boot 3.4.9, Java 17
+
+### 3️⃣ 앱 개발
+- **IDE**: VS Code
+- **Framework**: React Native 0.81.4, Expo ~54.0.13
+- **Platform**: Android Studio, Xcode
+
+### 공통 도구
 - **Version Control**: Git
+- **Database**: MariaDB 10.x
 - **API Test**: Postman
-
-## 👥 팀 구성
-
-- **Frontend Developer - Web**: [유지수]
-- **Frontend Developer - App**: [유지수]
-- **Backend Developer**: [유지수]
-
-
-## 📧 연락처
-
-- Email: yoo901013@gmail.com
-- GitHub: [@yoojisu90](https://github.com/yoojisu90)
-- Portfolio: [your-portfolio-link](https://your-portfolio.com)
+- **Communication**: WebSocket (STOMP)
 
 ---
 
-⭐ 이 프로젝트가 마음에 드신다면 스타를 눌러주세요!
+## 🎥 시연 영상
+
+각 단계별 시연 영상을 YouTube에 업로드하여 포트폴리오와 연동합니다.
+
+### 1️⃣ IoT 기기 개발
+- 센서 데이터 수집 및 자동 제어
+- 장치 작동 로그 기록
+
+### 2️⃣ 웹 개발
+- MyFarm 센서 시각화
+- 게시판 및 커뮤니티
+- 캘린더 및 쪽지 시스템
+
+### 3️⃣ 앱 개발
+- 실시간 채팅 시스템
+- 모바일 게시판
+- MyFarm 모바일 버전
+- iOS/Android 호환성
+
+---
+
+## 📞 연락처
+
+- **Email**: yoo901013@gmail.com
+- **GitHub**: [@yoojisu90](https://github.com/yoojisu90)
+- **Portfolio**: [GitHub Portfolio](https://github.com/yoojisu90/portfolio)
+
+---
+
+**⭐ 3단계로 완성한 이 프로젝트가 마음에 드신다면 스타를 눌러주세요!**
