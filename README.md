@@ -425,19 +425,6 @@ app_plant_community/
 - Expo 프레임워크
 - 모바일 최적화
 
----
-
-## 🔗 프로젝트 링크
-
-| 단계 | 파트 | 링크 |
-|------|------|------|
-| 1️⃣ | IoT 기기 | [workspace](https://github.com/yoojisu90/portfolio/tree/main/team/workspace) |
-| 2️⃣ | 웹 프론트 | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_comunity) |
-| 3️⃣ | 앱 프론트 | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) |
-| 백엔드 | 공통 | [backend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/backend_plant_comunity) |
-
----
-
 ## 🚀 설치 및 실행
 
 ### 1️⃣ IoT 기기 (Raspberry Pi)
@@ -549,6 +536,17 @@ cd backend_plant_comunity
 - 모바일 게시판
 - MyFarm 모바일 버전
 - iOS/Android 호환성
+
+---
+
+## 🔗 프로젝트 링크
+
+| 단계 | 파트 | 링크 |
+|------|------|------|
+| 1️⃣ | IoT 기기 | [workspace](https://github.com/yoojisu90/portfolio/tree/main/team/workspace) |
+| 2️⃣ | 웹 프론트 | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_comunity) |
+| 3️⃣ | 앱 프론트 | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) |
+| 백엔드 | 공통 | [backend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/backend_plant_comunity) |
 
 ---
 
