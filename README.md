@@ -543,9 +543,8 @@ cd backend_plant_comunity
 
 | 단계 | 파트 | 링크 |
 |------|------|------|
-| 1️⃣ | IoT 기기 | [workspace](https://github.com/yoojisu90/portfolio/tree/main/team/workspace) |
-| 2️⃣ | 웹 프론트 | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_comunity) |
-| 3️⃣ | 앱 프론트 | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) |
+| 1️⃣ | 웹 프론트 | [frontend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/frontend_plant_comunity) |
+| 2️⃣ | 앱 프론트 | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) |
 | 백엔드 | 공통 | [backend_plant_comunity](https://github.com/yoojisu90/portfolio/tree/main/team/backend_plant_comunity) |
 
 ---
