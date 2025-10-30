@@ -35,6 +35,11 @@ IoT 스마트팜 기술과 웹/모바일 커뮤니티 기능을 단계별로 구
 | **3️⃣ 앱 개발** | 2025.10.17 ~ 11.14 | React Native 기반 IoT 연동 및 실시간 채팅 | React Native, Expo, WebSocket, Spring Boot |
 
 ---
+## 📊 데이터베이스 설계
+
+### ERD (Entity Relationship Diagram)
+
+![ERD Diagram](./images/ERD관계도.png)
 
 ## 🔗 단계별 프로젝트 상세
 
@@ -50,12 +55,6 @@ IoT 스마트팜 기술과 웹/모바일 커뮤니티 기능을 단계별로 구
 - **Language**: Python 3.9+
 - **Database**: MariaDB 10.x
 - **Libraries**: Adafruit DHT, RPi.GPIO, mysql-connector-python, spidev
-
-## 📊 데이터베이스 설계
-
-### ERD (Entity Relationship Diagram)
-
-![ERD Diagram](./images/ERD관계도.png)
 
 #### 🛠 주요 구현 내용
 
