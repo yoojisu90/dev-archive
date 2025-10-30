@@ -510,7 +510,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 |------|------|------|
 | 🔙 Backend | [backend_plant_comunity](./backend_plant_comunity) | Spring Boot API 서버 |
 | 💻 Frontend Web | [frontend_plant_comunity](./frontend_plant_comunity) | React 웹 애플리케이션 |
-| 📱 Frontend Mobile | [app_plant_community](./app_plant_community) | React Native 모바일 앱 |
+| 📱 Frontend Mobile | [app_plant_community](https://github.com/yoojisu90/portfolio/tree/main/team/app_plant_community) | React Native 모바일 앱 |
 ```
 
 ---
