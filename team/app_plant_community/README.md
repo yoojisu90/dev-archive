@@ -1,6 +1,14 @@
-# Plant Community App
+# 🌱 GitHerb - 식물 커뮤니티 플랫폼
 
-식물 애호가들을 위한 모바일 커뮤니티 애플리케이션
+> 스마트팜 IoT 관리와 소셜 커뮤니티를 결합한 식물 관리 통합 플랫폼
+
+![Java](https://img.shields.io/badge/Java-17-007396?style=flat-square&logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.9-6DB33F?style=flat-square&logo=spring-boot)
+![React Native](https://img.shields.io/badge/React%20Native-0.81.4-61DAFB?style=flat-square&logo=react)
+![WebSocket](https://img.shields.io/badge/WebSocket-STOMP-010101?style=flat-square)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb)
+
+---
 
 ## 프로젝트 소개
 
