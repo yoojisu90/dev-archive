@@ -151,7 +151,6 @@ cd plant-community
 서버는 `http://localhost:8080` 에서 실행됩니다.
 
 ## 📊 ERD 및 API 명세
-![회원가입](screenshots/프로젝트ERD관계도.png)
 
 ### 📡 API 엔드포인트 정리
 
@@ -254,9 +253,6 @@ cd plant-community
 ### 1️⃣ 메인 화면
 > 직관적인 UI/UX로 식물 커뮤니티의 모든 기능에 쉽게 접근
 
-![메인화면](screenshots/홈화면.PNG)
-<!-- 또는 GIF: ![메인화면](screenshots/main.gif) -->
-
 **구현 기술**
 - RESTful API를 통한 데이터 페칭
 - 반응형 레이아웃 설계
@@ -272,10 +268,6 @@ cd plant-community
 
 ### 2️⃣ 회원가입 및 로그인
 > 안전하고 편리한 사용자 인증 시스템
-
-![회원가입](screenshots/회원가입.png)
-![아이디,비번찾기](screenshots/아이디,비밀번호 찾기.png)
-![회원정보수정](screenshots/회원정보수정.png)
 
 **구현 기술**
 - Spring Boot 기반* *세션 관리
@@ -301,10 +293,6 @@ POST /api/members/logout     // 로그아웃
 
 ### 3️⃣ 실시간 채팅
 > WebSocket STOMP 프로토콜 기반의 실시간 양방향 통신
-
-![쪽지보내기](screenshots/쪽지보내기.PNG)
-![쪽지세부사항](screenshots/쪽지세부사항.PNG)
-![쪽지답장](screenshots/쪽지답장.PNG)
 
 **구현 기술**
 - **WebSocket + STOMP**: 실시간 메시지 전송/수신
@@ -358,9 +346,6 @@ Client ─────> STOMP ─────> Message Broker ─────> S
 
 ### 4️⃣ 식물 도감, 환경데이터
 > 다양한 식물 정보를 제공하는 백과사전
-
-![식물정보, 작동로그](screenshots/식물선택,작동로그.png)
-![환경그래프](screenshots/환경그래프.png)
 
 **구현 기술**
 - RESTful API 설계
@@ -477,20 +462,3 @@ public ResponseEntity<PageResponseDTO<PlantDTO>> getPlants(
 - **Build Tool**: Gradle
 - **Version Control**: Git
 - **API Test**: Postman
-
-## 👥 팀 구성
-
-- **Frontend Developer - Web**: [유지수]
-- **Frontend Developer - App**: [유지수]
-- **Backend Developer**: [유지수]
-
-
-## 📧 연락처
-
-- Email: yoo901013@gmail.com
-- GitHub: [@yoojisu90](https://github.com/yoojisu90)
-- Portfolio: [your-portfolio-link](https://your-portfolio.com)
-
----
-
-⭐ 이 프로젝트가 마음에 드신다면 스타를 눌러주세요!
