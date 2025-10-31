@@ -171,7 +171,7 @@
 
 | 기능 | 영상 |
 |------|------|
-| **1️⃣ 회원가입** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_signup.mp4" type="video/mp4"></video> |
+| **1️⃣ 회원가입** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/회원가입.mp4" type="video/mp4"></video> |
 | **2️⃣ 게시글 작성** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_board_create.mp4" type="video/mp4"></video> |
 | **사진 삭제** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_image_delete.mp4" type="video/mp4"></video> |
 | **3️⃣ 환경 데이터** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_environment_data.mp4" type="video/mp4"></video> |
