@@ -39,14 +39,14 @@
 - 회원/게시판/채팅 등 통합 비즈니스 로직 관리
 
 **💻 기술 스택**
-### Backend
+##### Backend
 - **Framework**: Spring Boot 3.4.9
 - **Language**: Java 17
 - **ORM**: MyBatis 3.0.5
 - **Database**: MariaDB
 - **Real-time**: WebSocket (STOMP)
 
-### Library & Tools
+#### Library & Tools
 - **Lombok**: 보일러플레이트 코드 감소
 - **JSoup**: HTML 파싱 및 이미지 추출
 - **Log4jdbc**: SQL 쿼리 로깅
