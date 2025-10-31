@@ -175,7 +175,7 @@
 <tr>
   <td><b>1️⃣ 회원가입</b></td>
   <td>
-    <video width="100%" controls><source src="https://github.com/yoojisu90/dev-archive/tree/main/videos.mp4" type="video/mp4"></video>
+    <video width="100%" controls><source src="https://github.com/yoojisu90/dev-archive/tree/main/videos/회원가입.mp4" type="video/mp4"></video>
   </td>
 </tr>
 <tr>
