@@ -165,21 +165,117 @@
 
 ## 🎥 시연 영상
 
-### 웹 (React)
-<!--
-<video width="100%" controls>
-  <source src="videos/web_demo.mp4" type="video/mp4">
-</video>
--->
-*영상 준비 중...*
+### 🌐 웹 (React)
 
-### 모바일 앱 (React Native)
-<!--
-<video width="100%" controls>
-  <source src="videos/app_demo.mp4" type="video/mp4">
-</video>
--->
-*영상 준비 중...*
+<table>
+<tr>
+  <th>기능</th>
+  <th>영상</th>
+</tr>
+<tr>
+  <td><b>1️⃣ 회원가입</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/회원가입.mp4" type="video/mp4"></video>-->
+    <i>영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td rowspan="2"><b>2️⃣ 게시글</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/web_board_1.mp4" type="video/mp4"></video>-->
+    <i>게시글 작성 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td>
+    <!--<video width="100%" controls><source src="videos/web_board_2.mp4" type="video/mp4"></video>-->
+    <i>사진 삭제 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td rowspan="2"><b>3️⃣ 환경 데이터</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/web_environment_1.mp4" type="video/mp4"></video>-->
+    <i>환경 데이터 조회 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td>
+    <!--<video width="100%" controls><source src="videos/web_environment_2.mp4" type="video/mp4"></video>-->
+    <i>일정 관리 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td><b>4️⃣ 쪽지</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/web_message.mp4" type="video/mp4"></video>-->
+    <i>쪽지 주고받기 - 영상 준비 중...</i>
+  </td>
+</tr>
+</table>
+
+---
+
+### 📱 모바일 앱 (React Native)
+
+<table>
+<tr>
+  <th>기능</th>
+  <th>영상</th>
+</tr>
+<tr>
+  <td rowspan="2"><b>1️⃣ 회원</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_signup.mp4" type="video/mp4"></video>-->
+    <i>회원가입 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_profile.mp4" type="video/mp4"></video>-->
+    <i>프로필 변경 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td rowspan="2"><b>2️⃣ 게시글</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_board_create.mp4" type="video/mp4"></video>-->
+    <i>게시글 작성 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_board_search.mp4" type="video/mp4"></video>-->
+    <i>게시글 검색 및 댓글 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td><b>3️⃣ 기기 제어 및 일정</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_device_schedule.mp4" type="video/mp4"></video>-->
+    <i>영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td rowspan="3"><b>4️⃣ 메신저</b></td>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_chat.mp4" type="video/mp4"></video>-->
+    <i>채팅 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_photo.mp4" type="video/mp4"></video>-->
+    <i>사진 첨부 - 영상 준비 중...</i>
+  </td>
+</tr>
+<tr>
+  <td>
+    <!--<video width="100%" controls><source src="videos/app_file.mp4" type="video/mp4"></video>-->
+    <i>파일 첨부 - 영상 준비 중...</i>
+  </td>
+</tr>
+</table>
 
 ---
 
