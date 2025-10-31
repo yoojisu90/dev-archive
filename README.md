@@ -167,14 +167,16 @@
 
 ### 🌐 웹 (React)
 
+### 🌐 웹 (React)
+
 | 기능 | 영상 |
 |------|------|
-| **1️⃣ 회원가입** | [▶️ 보기](videos/회원가입.mp4) |
-| **2️⃣ 게시글 작성** | [▶️ 보기](videos/web_board_create.mp4) |
-| **사진 삭제** | [▶️ 보기](videos/web_image_delete.mp4) |
-| **3️⃣ 환경 데이터** | [▶️ 보기](videos/web_environment_data.mp4) |
-| **일정 관리** | [▶️ 보기](videos/web_schedule.mp4) |
-| **4️⃣ 쪽지** | [▶️ 보기](videos/web_message.mp4) |
+| **1️⃣ 회원가입** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_signup.mp4" type="video/mp4"></video> |
+| **2️⃣ 게시글 작성** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_board_create.mp4" type="video/mp4"></video> |
+| **사진 삭제** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_image_delete.mp4" type="video/mp4"></video> |
+| **3️⃣ 환경 데이터** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_environment_data.mp4" type="video/mp4"></video> |
+| **일정 관리** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_schedule.mp4" type="video/mp4"></video> |
+| **4️⃣ 쪽지** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_message.mp4" type="video/mp4"></video> |
 
 ---
 
@@ -182,14 +184,14 @@
 
 | 기능 | 영상 |
 |------|------|
-| **1️⃣ 회원가입** | [▶️ 보기](videos/app_signup.mp4) |
-| **프로필 변경** | [▶️ 보기](videos/app_profile.mp4) |
-| **2️⃣ 게시글 작성** | [▶️ 보기](videos/app_board_create.mp4) |
-| **게시글 검색 및 댓글** | [▶️ 보기](videos/app_board_search.mp4) |
-| **3️⃣ 기기 제어 및 일정** | [▶️ 보기](videos/app_device_schedule.mp4) |
-| **4️⃣ 채팅** | [▶️ 보기](videos/app_chat.mp4) |
-| **사진 첨부** | [▶️ 보기](videos/app_photo.mp4) |
-| **파일 첨부** | [▶️ 보기](videos/app_file.mp4) |
+| **1️⃣ 회원가입** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_signup.mp4" type="video/mp4"></video> |
+| **프로필 변경** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_profile.mp4" type="video/mp4"></video> |
+| **2️⃣ 게시글 작성** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_board_create.mp4" type="video/mp4"></video> |
+| **게시글 검색 및 댓글** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_board_search.mp4" type="video/mp4"></video> |
+| **3️⃣ 기기 제어 및 일정** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_device_schedule.mp4" type="video/mp4"></video> |
+| **4️⃣ 채팅** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_chat.mp4" type="video/mp4"></video> |
+| **사진 첨부** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_photo.mp4" type="video/mp4"></video> |
+| **파일 첨부** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_file.mp4" type="video/mp4"></video> |
 
 ---
 
