@@ -175,9 +175,7 @@
 <tr>
   <td><b>1️⃣ 회원가입</b></td>
   <td>
-    <video width="100%" controls>
-      <source src="https://YOUR_CLOUDFLARE_URL/회원가입.mp4" type="video/mp4">
-    </video>   
+    [![Video Thumbnail](https://img.shields.io/badge/Video-Play-red)](videos/회원가입.mp4)
   </td>
 </tr>
 <tr>
