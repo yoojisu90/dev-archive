@@ -34,6 +34,7 @@
 ### 공통 - Spring boot 백엔드 개발
 **[📄백엔드 - 프로젝트 링크](https://github.com/yoojisu90/dev-archive/tree/main/team/backend_plant_comunity)**
 
+---
 
 ### 1️⃣ IoT 기기 개발
 
