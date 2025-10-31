@@ -163,40 +163,93 @@
 
 ---
 
-https://github.com/user-attachments/assets/bf3c6677-eb72-4ffa-8488-594392fa0858
-
-
-
 ## 🎥 시연 영상
 
 ### 🌐 웹 (React)
 
-| 기능 | 영상 |
-|------|------|
-| **1️⃣ 회원가입** | https://github.com/user-attachments/assets/0c1c9c4a-f8d7-47b6-8eb3-3a6a3cf351ce |
-| **2️⃣ 게시글 작성** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_board_create.mp4" type="video/mp4"></video> |
-| **사진 삭제** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_image_delete.mp4" type="video/mp4"></video> |
-| **3️⃣ 환경 데이터** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_environment_data.mp4" type="video/mp4"></video> |
-| **일정 관리** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_schedule.mp4" type="video/mp4"></video> |
-| **4️⃣ 쪽지** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/web_message.mp4" type="video/mp4"></video> |
+**1️⃣ 회원가입**
+
+https://github.com/user-attachments/assets/353b8c2b-216a-4d37-9568-7cc9c8dfdffc
+
+---
+
+**2️⃣ 게시글**
+
+- 게시글 작성
+
+https://github.com/user-attachments/assets/edb13e4a-9562-422e-b0e3-e8a6b69735bb
+
+- 사진 삭제
+
+https://github.com/user-attachments/assets/98691780-04e6-4fe4-87e4-aa77cd8b3445
+
+---
+
+**3️⃣ 환경 데이터**
+
+- 환경 데이터
+
+https://github.com/user-attachments/assets/8548bd7a-2066-45f3-beda-453dd00fe4f7
+
+- 일정 관리
+
+https://github.com/user-attachments/assets/edb357f1-b7f6-4a9f-a357-e9b424d89cc2
+
+---
+
+**4️⃣ 쪽지**
+
+https://github.com/user-attachments/assets/59e0f390-85ab-4edb-99cc-2b19e90afefb
 
 ---
 
 ### 📱 모바일 앱 (React Native)
 
-| 기능 | 영상 |
-|------|------|
-| **1️⃣ 회원가입** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_signup.mp4" type="video/mp4"></video> |
-| **프로필 변경** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_profile.mp4" type="video/mp4"></video> |
-| **2️⃣ 게시글 작성** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_board_create.mp4" type="video/mp4"></video> |
-| **게시글 검색 및 댓글** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_board_search.mp4" type="video/mp4"></video> |
-| **3️⃣ 기기 제어 및 일정** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_device_schedule.mp4" type="video/mp4"></video> |
-| **4️⃣ 채팅** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_chat.mp4" type="video/mp4"></video> |
-| **사진 첨부** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_photo.mp4" type="video/mp4"></video> |
-| **파일 첨부** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/app_file.mp4" type="video/mp4"></video> |
+**1️⃣ 회원**
+
+- 회원가입
+
+https://github.com/user-attachments/assets/39f504fe-397c-4fb3-ad3b-a129b70e9088
+
+- 프로필 변경
+
+https://github.com/user-attachments/assets/bbe2dddb-cd3d-436a-a3ed-9775bba860c9
 
 ---
 
+**2️⃣ 게시글**
+
+- 게시글 작성
+
+https://github.com/user-attachments/assets/2b2bb174-f1bd-4e95-a4be-e94615361efd
+
+- 게시글 검색 및 댓글
+
+https://github.com/user-attachments/assets/50725b9f-e7b2-463b-9632-eeea24dfdc2d
+
+---
+
+**3️⃣ 기기 제어 및 일정**
+
+*(영상 URL 추가 예정)*
+
+---
+
+**4️⃣ 메신저**
+
+- 채팅
+
+*(영상 URL 추가 예정)*
+
+- 사진 첨부
+
+*(영상 URL 추가 예정)*
+
+- 파일 첨부
+
+*(영상 URL 추가 예정)*
+
+---
 ## 👥 프로젝트 정보
 
 **프로젝트명**: GitHerb - 식물 커뮤니티 플랫폼
