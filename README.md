@@ -167,8 +167,6 @@
 
 ### 🌐 웹 (React)
 
-### 🌐 웹 (React)
-
 | 기능 | 영상 |
 |------|------|
 | **1️⃣ 회원가입** | <video width="100%" controls><source src="https://raw.githubusercontent.com/yoojisu90/dev-archive/main/videos/회원가입.mp4" type="video/mp4"></video> |
