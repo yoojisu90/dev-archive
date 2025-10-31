@@ -151,7 +151,7 @@
 - **WebSocket (@stomp/stompjs)** - 실시간 채팅 통신
 - **SockJS Client** - WebSocket 폴백 지원
 - **Axios** - HTTP 클라이언트
-- **AsyncStorage** - 로컬 데이터 저장
+- **sessionStorage** - 로컬 데이터 저장
 
 **📊 주요 성과**
 - ✅ WebSocket 싱글톤으로 안정적인 연결 관리

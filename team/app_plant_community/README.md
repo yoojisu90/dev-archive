@@ -24,7 +24,7 @@ Plant Community는 식물을 사랑하는 사람들이 모여 정보를 공유�
 - **WebSocket (@stomp/stompjs)** - 실시간 채팅 통신
 - **SockJS Client** - WebSocket 폴백 지원
 - **Axios** - HTTP 클라이언트
-- **AsyncStorage** - 로컬 데이터 저장
+- **sessionStorage** - 로컬 데이터 저장
 
 ### Backend
 - **Spring Boot** - RESTful API 서버
