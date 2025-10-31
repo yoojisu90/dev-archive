@@ -39,7 +39,7 @@
 - 회원/게시판/채팅 등 통합 비즈니스 로직 관리
 
 **💻 기술 스택**
-##### Backend
+#### Backend
 - **Framework**: Spring Boot 3.4.9
 - **Language**: Java 17
 - **ORM**: MyBatis 3.0.5
@@ -52,7 +52,7 @@
 - **Log4jdbc**: SQL 쿼리 로깅
 - **Date-holidays**: 한국 공휴일 처리
 
-### API
+#### API
 - **Kakao API**: 날씨 정보 제공
 
 **📊 주요 성과**
@@ -93,34 +93,34 @@
 - 실시간 쪽지 시스템 구현
 
 **💻 기술 스택**
-### Frontend Core
+#### Frontend Core
 - **React 18.2.0** - UI 라이브러리
 - **React Router DOM 7.8.2** - 클라이언트 사이드 라우팅
 - **Vite 7.1.2** - 빌드 도구 및 개발 서버
 - **Axios 1.11.0** - HTTP 클라이언트
 
-### UI & Visualization
+#### UI & Visualization
 - **Chart.js 4.5.0** & **React-Chartjs-2 5.3.0** - 센서 데이터 시각화
 - **React Big Calendar 1.19.4** - 캘린더 컴포넌트
 - **React Quill 2.0.0** - 리치 텍스트 에디터
 - **Bootstrap Icons 1.13.1** - 아이콘 라이브러리
 
-### Date & Time
+#### Date & Time
 - **Moment.js 2.30.1** - 날짜 포맷팅
 - **date-fns 4.1.0** - 날짜 유틸리티
 - **dayjs 1.11.18** - 경량 날짜 라이브러리
 - **date-holidays 3.26.1** - 한국 공휴일 캘린더
 
-### Additional Libraries
+#### Additional Libraries
 - **React Daum Postcode 3.2.0** - 한국 주소 검색
 - **UUID 13.0.0** - 고유 ID 생성
 
-### Backend Integration
+#### Backend Integration
 - **Proxy Server**: Vite 개발 서버가 `/api` 요청을 `http://localhost:8080`로 프록시
 - **Session Management**: sessionStorage를 사용한 로그인 정보 저장
 - **Cookie Authentication**: Axios `withCredentials: true` 설정
 
-### State Management
+#### State Management
 - React 내장 상태 관리 (useState, useEffect)
 - sessionStorage (인증 정보)
 - localStorage (사용자별 캘린더 데이터)
