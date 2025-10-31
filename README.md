@@ -175,8 +175,7 @@
 <tr>
   <td><b>1️⃣ 회원가입</b></td>
   <td>
-    <!--<video width="100%" controls><source src="videos/회원가입.mp4" type="video/mp4"></video>-->
-    <i>영상 준비 중...</i>
+    <video width="100%" controls><source src="videos/회원가입.mp4" type="video/mp4"></video>
   </td>
 </tr>
 <tr>
