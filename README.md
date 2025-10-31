@@ -39,8 +39,21 @@
 - 회원/게시판/채팅 등 통합 비즈니스 로직 관리
 
 **💻 기술 스택**
-- Spring Boot 3.4.9, Java 17, MyBatis 3.0.5, MariaDB
-- WebSocket (STOMP), JSoup, Log4jdbc
+### Backend
+- **Framework**: Spring Boot 3.4.9
+- **Language**: Java 17
+- **ORM**: MyBatis 3.0.5
+- **Database**: MariaDB
+- **Real-time**: WebSocket (STOMP)
+
+### Library & Tools
+- **Lombok**: 보일러플레이트 코드 감소
+- **JSoup**: HTML 파싱 및 이미지 추출
+- **Log4jdbc**: SQL 쿼리 로깅
+- **Date-holidays**: 한국 공휴일 처리
+
+### API
+- **Kakao API**: 날씨 정보 제공
 
 **📊 주요 성과**
 - ✅ 15+ RESTful API 엔드포인트 구현
@@ -80,7 +93,39 @@
 - 실시간 쪽지 시스템 구현
 
 **💻 기술 스택**
-- React 18.2.0, Spring Boot 3.4.9, Chart.js, React Big Calendar, MariaDB
+### Frontend Core
+- **React 18.2.0** - UI 라이브러리
+- **React Router DOM 7.8.2** - 클라이언트 사이드 라우팅
+- **Vite 7.1.2** - 빌드 도구 및 개발 서버
+- **Axios 1.11.0** - HTTP 클라이언트
+
+### UI & Visualization
+- **Chart.js 4.5.0** & **React-Chartjs-2 5.3.0** - 센서 데이터 시각화
+- **React Big Calendar 1.19.4** - 캘린더 컴포넌트
+- **React Quill 2.0.0** - 리치 텍스트 에디터
+- **Bootstrap Icons 1.13.1** - 아이콘 라이브러리
+
+### Date & Time
+- **Moment.js 2.30.1** - 날짜 포맷팅
+- **date-fns 4.1.0** - 날짜 유틸리티
+- **dayjs 1.11.18** - 경량 날짜 라이브러리
+- **date-holidays 3.26.1** - 한국 공휴일 캘린더
+
+### Additional Libraries
+- **React Daum Postcode 3.2.0** - 한국 주소 검색
+- **UUID 13.0.0** - 고유 ID 생성
+
+### Backend Integration
+- **Proxy Server**: Vite 개발 서버가 `/api` 요청을 `http://localhost:8080`로 프록시
+- **Session Management**: sessionStorage를 사용한 로그인 정보 저장
+- **Cookie Authentication**: Axios `withCredentials: true` 설정
+
+### State Management
+- React 내장 상태 관리 (useState, useEffect)
+- sessionStorage (인증 정보)
+- localStorage (사용자별 캘린더 데이터)
+- Custom Events (쪽지 시스템 크로스 컴포넌트 통신)
+
 
 **📊 주요 성과**
 - ✅ 1초 주기 센서 데이터 실시간 갱신
@@ -100,7 +145,13 @@
 - IoT 데이터와 커뮤니티 기능의 완전한 통합
 
 **💻 기술 스택**
-- React Native 0.81.4, Expo, WebSocket (@stomp/stompjs), Spring Boot 3.4.9
+- **React Native** (0.81.4) - 크로스 플랫폼 모바일 앱 개발
+- **Expo** (~54.0.13) - React Native 개발 프레임워크
+- **Expo Router** (~6.0.11) - 파일 기반 라우팅 시스템
+- **WebSocket (@stomp/stompjs)** - 실시간 채팅 통신
+- **SockJS Client** - WebSocket 폴백 지원
+- **Axios** - HTTP 클라이언트
+- **AsyncStorage** - 로컬 데이터 저장
 
 **📊 주요 성과**
 - ✅ WebSocket 싱글톤으로 안정적인 연결 관리
