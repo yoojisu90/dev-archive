@@ -31,7 +31,23 @@
 
 ## 🔗 단계별 프로젝트 요약
 
-### 공통 - Spring boot 백엔드 개발
+### 🔧 공통 백엔드 (Spring Boot)
+
+**🎯 목표**
+- RESTful API 설계 및 구현
+- 실시간 채팅 WebSocket 시스템 구축
+- 회원/게시판/채팅 등 통합 비즈니스 로직 관리
+
+**💻 기술 스택**
+- Spring Boot 3.4.9, Java 17, MyBatis 3.0.5, MariaDB
+- WebSocket (STOMP), JSoup, Log4jdbc
+
+**📊 주요 성과**
+- ✅ 15+ RESTful API 엔드포인트 구현
+- ✅ WebSocket STOMP로 안정적인 실시간 통신
+- ✅ MyBatis를 통한 효율적 데이터 관리
+- ✅ 이미지 자동 관리 스케줄러 (정크 파일 정리)
+  
 **[📄백엔드 - 프로젝트 링크](https://github.com/yoojisu90/dev-archive/tree/main/team/backend_plant_comunity)**
 
 ---
